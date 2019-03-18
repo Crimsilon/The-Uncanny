@@ -477,12 +477,22 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   dialogueBox: {fileID: 1958993627}
   scene: {fileID: 0}
-  dialogue:
-    name: Safe
+  interactDialogue:
+    name: Detective
     sentences:
-    - Hey
-    - Hey look at me
-    - Bitch
+    - What mysteries do you hold, safe?
+    - What do you keep inside?
+    - Are you the one from my dreams?
+  observeDialogue:
+    name: Detective
+    sentences:
+    - 'It''s a safe.
+
+'
+    - 'I could probably open it if I had the passcode...
+
+'
+  observe: 0
 --- !u!65 &171854404
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -550,9 +560,17 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   dialogueBox: {fileID: 1958993627}
   scene: {fileID: 0}
-  dialogue:
-    name: 
-    sentences: []
+  interactDialogue:
+    name: Creature
+    sentences:
+    - Whatever you want, I don't have it.
+    - Now go away!
+  observeDialogue:
+    name: Detective
+    sentences:
+    - What a hideous creature...
+    - If looks could kill, there'd be another crime scene here.
+  observe: 0
 --- !u!1 &416143976
 GameObject:
   m_ObjectHideFlags: 0
@@ -744,6 +762,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   nameText: {fileID: 650643891}
   dialogueText: {fileID: 1970812382}
+  nextSentence: 0
 --- !u!4 &630696513
 Transform:
   m_ObjectHideFlags: 0
