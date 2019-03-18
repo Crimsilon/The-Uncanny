@@ -112,7 +112,11 @@ public class objectInformation : MonoBehaviour
 
     public GameObject scene;
 
-    public Dialogue dialogue;
+    public Dialogue interactDialogue;
+
+    public Dialogue observeDialogue;
+
+    public bool observe = false;
 
     // Use this for initialization
     void Start()
@@ -123,7 +127,15 @@ public class objectInformation : MonoBehaviour
 
     public void TriggerDialogue()
     {
-        FindObjectOfType<dialogueManager>().StartDialogue(dialogue);
+        if (observe == false)
+        {
+            FindObjectOfType<dialogueManager>().StartDialogue(interactDialogue);
+        }
+
+        if (observe == true)
+        {
+            FindObjectOfType<dialogueManager>().StartDialogue(observeDialogue);
+        }
     }
 
     // Update is called once per frame
@@ -133,6 +145,7 @@ public class objectInformation : MonoBehaviour
         {
             ///StartCoroutine(observeActivate());
             ///Debug.Log("You are observing the Jeffko object");
+            observe = true;
             keysEnabled = false;
             dialogueBox.SetActive(true);
             TriggerDialogue();
@@ -143,6 +156,7 @@ public class objectInformation : MonoBehaviour
         {
             ///StartCoroutine(interactActivate());
             ///Debug.Log("You are interacting with the Jeffko object");
+            observe = false;
             keysEnabled = false;
             dialogueBox.SetActive(true);
             TriggerDialogue();
