@@ -10,6 +10,8 @@ public class dialogueManager : MonoBehaviour {
 
     private Queue<string> sentences;
 
+    public bool nextSentence = false;
+
 	// Use this for initialization
 	void Start () {
         sentences = new Queue<string>();
@@ -43,15 +45,20 @@ public class dialogueManager : MonoBehaviour {
         string sentence = sentences.Dequeue();
         Debug.Log(sentence);
         dialogueText.text = sentence;
-
-        if (Input.GetKeyDown(KeyCode.Space))
-        {
-            DisplayNextSentence();
-        }
+        nextSentence = true;
     }
 
     void EndDialogue()
     {
         Debug.Log("End of conversation.");
+    }
+
+    private void Update()
+    {
+        if (Input.GetKeyDown(KeyCode.Space) && nextSentence == true)
+        {
+            nextSentence = false;
+            DisplayNextSentence();
+        }
     }
 }
