@@ -12,6 +12,16 @@ public class playerController : MonoBehaviour {
 
     public bool direction = false;
 
+    public GameObject player;
+
+    public float yAngle = 0f;
+
+    public Transform rotationForward;
+
+    public float moveSpeed = 10f;
+    public float turnSpeed = 50f;
+
+
     // Use this for initialization
     void Start()
     {
@@ -22,28 +32,30 @@ public class playerController : MonoBehaviour {
     // Update is called once per frame
     void Update()
     {
+        player.transform.Rotate(0, 0, 0);
+
         m_XAxis = new Vector3(speed, 0, 0);
         m_ZAxis = new Vector3(0, 0, speed);
 
         if (Input.GetKey(KeyCode.D))
         {
-            rb.constraints = RigidbodyConstraints.FreezePositionY | RigidbodyConstraints.FreezeRotation;
+            rb.constraints = RigidbodyConstraints.FreezePositionY | RigidbodyConstraints.FreezeRotationX | RigidbodyConstraints.FreezeRotationZ;
             rb.velocity = m_XAxis;
         }
 
         else if (Input.GetKey(KeyCode.A))
         {
-            rb.constraints = RigidbodyConstraints.FreezePositionY | RigidbodyConstraints.FreezeRotation;
+            rb.constraints = RigidbodyConstraints.FreezePositionY | RigidbodyConstraints.FreezeRotationX | RigidbodyConstraints.FreezeRotationZ;
             rb.velocity = -m_XAxis;
         }
         else if (Input.GetKey(KeyCode.W))
         {
-            rb.constraints = RigidbodyConstraints.FreezePositionY | RigidbodyConstraints.FreezeRotation;
+            rb.constraints = RigidbodyConstraints.FreezePositionY | RigidbodyConstraints.FreezeRotationX | RigidbodyConstraints.FreezeRotationZ;
             rb.velocity = m_ZAxis;
         }
         else if (Input.GetKey(KeyCode.S))
         {
-            rb.constraints = RigidbodyConstraints.FreezePositionY | RigidbodyConstraints.FreezeRotation;
+            rb.constraints = RigidbodyConstraints.FreezePositionY | RigidbodyConstraints.FreezeRotationX | RigidbodyConstraints.FreezeRotationZ;
             rb.velocity = -m_ZAxis;
         }
 
