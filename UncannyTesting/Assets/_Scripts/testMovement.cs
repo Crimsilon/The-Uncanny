@@ -18,10 +18,10 @@ public class testMovement : MonoBehaviour {
 
     private int currentWaypoint = 0;
 
-    private CharacterController character;
+    private Rigidbody character;
  
     void Start() {
-        character = GetComponent<CharacterController>();
+        character = GetComponent<Rigidbody>();
     }
 
     void Update () {
@@ -60,7 +60,7 @@ public class testMovement : MonoBehaviour {
         {
             var rotation = Quaternion.LookRotation(target - transform.position);
             transform.rotation = Quaternion.Slerp(transform.rotation, rotation, Time.deltaTime * dampingLook);
-            character.Move(moveDirection.normalized * patrolSpeed * Time.deltaTime);
+            character.MovePosition(moveDirection.normalized * patrolSpeed * Time.deltaTime);
         }
     }
 }
