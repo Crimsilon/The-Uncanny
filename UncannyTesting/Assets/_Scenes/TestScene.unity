@@ -535,7 +535,7 @@ Prefab:
     - target: {fileID: 114021620649733992, guid: 48773f90efba89643b0a103220fb4ae8,
         type: 2}
       propertyPath: patrolSpeed
-      value: 3
+      value: 2
       objectReference: {fileID: 0}
     - target: {fileID: 54340100289606054, guid: 48773f90efba89643b0a103220fb4ae8,
         type: 2}
