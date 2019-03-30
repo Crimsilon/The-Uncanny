@@ -60,7 +60,7 @@ public class testMovement : MonoBehaviour {
         {
             var rotation = Quaternion.LookRotation(target - transform.position);
             transform.rotation = Quaternion.Slerp(transform.rotation, rotation, Time.deltaTime * dampingLook);
-            character.MovePosition(moveDirection.normalized * patrolSpeed * Time.deltaTime);
+            character.MovePosition(transform.position + transform.forward * patrolSpeed * Time.deltaTime);
         }
     }
 }
