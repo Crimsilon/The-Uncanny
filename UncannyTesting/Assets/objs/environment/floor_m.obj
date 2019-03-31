@@ -1,0 +1,12 @@
+# Blender v2.79 (sub 0) OBJ File: 'scalingscene_2.blend'
+# www.blender.org
+mtllib floor_m.mtl
+o floor_m_Plane.006
+v 3.232039 0.000000 3.000000
+v 9.232039 0.000000 3.000000
+v 3.232039 0.000000 -3.000000
+v 9.232039 0.000000 -3.000000
+vn 0.0000 1.0000 0.0000
+usemtl None
+s off
+f 1//1 2//1 4//1 3//1
