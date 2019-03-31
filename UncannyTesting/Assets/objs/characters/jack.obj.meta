@@ -1,16 +1,16 @@
 fileFormatVersion: 2
-guid: 59ab4b1d2b3adee44844c97e9e6a56ae
+guid: 4186c7092c1b26447a700cada230d803
 ModelImporter:
   serializedVersion: 23
   fileIDToRecycleName:
-    100000: //RootNode
-    100002: trafficcone_trafficcone
-    400000: //RootNode
-    400002: trafficcone_trafficcone
-    2100000: trafficcone_trafficconeMat
-    2300000: trafficcone_trafficcone
-    3300000: trafficcone_trafficcone
-    4300000: trafficcone_trafficcone
+    100000: default
+    100002: //RootNode
+    400000: default
+    400002: //RootNode
+    2100000: defaultMat
+    2300000: default
+    3300000: default
+    4300000: default
   externalObjects: {}
   materials:
     importMaterials: 1
