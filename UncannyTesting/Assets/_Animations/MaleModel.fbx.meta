@@ -1,5 +1,5 @@
 fileFormatVersion: 2
-guid: 47d44354f93e2c840ae5880028547725
+guid: 5b376c615dc1b1e44b2960eb27f5322e
 ModelImporter:
   serializedVersion: 23
   fileIDToRecycleName:
@@ -20,20 +20,20 @@ ModelImporter:
     100028: Leg_Left_Top
     100030: Leg_Right_Foot
     100032: male
-    100034: Middle_Arms
-    100036: Neck
-    100038: Pelvis
-    100040: Right_Arm_Elbow
-    100042: Right_Arm_Tips
-    100044: Right_Arm_Upper
-    100046: Right_Fingers
-    100048: Right_leg_top
-    100050: Right_tip
-    100052: Right_Wrist
-    100054: Sternum
-    100056: Upper_Neck
-    100058: Waist
-    100060: //RootNode
+    100034: //RootNode
+    100036: Middle_Arms
+    100038: Neck
+    100040: Pelvis
+    100042: Right_Arm_Elbow
+    100044: Right_Arm_Tips
+    100046: Right_Arm_Upper
+    100048: Right_Fingers
+    100050: Right_leg_top
+    100052: Right_tip
+    100054: Right_Wrist
+    100056: Sternum
+    100058: Upper_Neck
+    100060: Waist
     400000: Chest
     400002: Face
     400004: Head
@@ -51,23 +51,22 @@ ModelImporter:
     400028: Leg_Left_Top
     400030: Leg_Right_Foot
     400032: male
-    400034: Middle_Arms
-    400036: Neck
-    400038: Pelvis
-    400040: Right_Arm_Elbow
-    400042: Right_Arm_Tips
-    400044: Right_Arm_Upper
-    400046: Right_Fingers
-    400048: Right_leg_top
-    400050: Right_tip
-    400052: Right_Wrist
-    400054: Sternum
-    400056: Upper_Neck
-    400058: Waist
-    400060: //RootNode
+    400034: //RootNode
+    400036: Middle_Arms
+    400038: Neck
+    400040: Pelvis
+    400042: Right_Arm_Elbow
+    400044: Right_Arm_Tips
+    400046: Right_Arm_Upper
+    400048: Right_Fingers
+    400050: Right_leg_top
+    400052: Right_tip
+    400054: Right_Wrist
+    400056: Sternum
+    400058: Upper_Neck
+    400060: Waist
     2100000: Material.001
     4300000: male
-    7400000: Take 001
     9500000: //RootNode
     13700000: male
   externalObjects: {}
@@ -97,35 +96,7 @@ ModelImporter:
     animationWrapMode: 0
     extraExposedTransformPaths: []
     extraUserProperties: []
-    clipAnimations:
-    - serializedVersion: 16
-      name: Take 001
-      takeName: Take 001
-      firstFrame: 1
-      lastFrame: 39
-      wrapMode: 0
-      orientationOffsetY: 0
-      level: 0
-      cycleOffset: 0
-      loop: 0
-      hasAdditiveReferencePose: 0
-      loopTime: 1
-      loopBlend: 0
-      loopBlendOrientation: 0
-      loopBlendPositionY: 0
-      loopBlendPositionXZ: 0
-      keepOriginalOrientation: 0
-      keepOriginalPositionY: 1
-      keepOriginalPositionXZ: 0
-      heightFromFeet: 0
-      mirror: 0
-      bodyMask: 01000000010000000100000001000000010000000100000001000000010000000100000001000000010000000100000001000000
-      curves: []
-      events: []
-      transformMask: []
-      maskType: 3
-      maskSource: {instanceID: 0}
-      additiveReferencePoseFrame: 0
+    clipAnimations: []
     isReadable: 1
   meshes:
     lODScreenPercentages: []
