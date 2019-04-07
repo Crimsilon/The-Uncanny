@@ -1,5 +1,5 @@
 fileFormatVersion: 2
-guid: 9e94900d0d513834f82e6ddb6d05cccd
+guid: a3b580129be272b4886d56b875b5b0ac
 ModelImporter:
   serializedVersion: 23
   fileIDToRecycleName:
@@ -8,8 +8,7 @@ ModelImporter:
     2100000: No Name
     2300000: //RootNode
     3300000: //RootNode
-    4300000: wall_indoor_s
-    4300002: wall_indoor_s.003
+    4300000: discofloor_m
   externalObjects: {}
   materials:
     importMaterials: 1
