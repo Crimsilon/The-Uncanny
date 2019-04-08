@@ -43,22 +43,7 @@ public class turretRotation : MonoBehaviour {
                 {
                     print("Whose footprints are these");
                     StartCoroutine(TimeToDie());
-
-                    RaycastHit hitConfirm = new RaycastHit();
-
-                    if (Physics.Raycast(transform.position, direction, out hitConfirm))
-                    {
-                        if (hitConfirm.collider.gameObject.tag == "Player")
-                        {
-                            print("You are dead");
-                        }
-                        if (playerInRange == false)
-                        {
-                            print("Must have been my imagination");
-                            turretStart = true;
-                            return;
-                        }
-                    }
+                    return;
                 }
                 else
                 {
@@ -82,9 +67,17 @@ public class turretRotation : MonoBehaviour {
     IEnumerator TimeToDie()
     {
         yield return new WaitForSeconds(1.5f);
+        if (playerInRange == true)
+        {
+            print("You are dead.");
+        }
+        else
+        {
+            print("Must have been my imagination.");
+        }
     }
 
-    void HitConfirmation() {
+    public void HitConfirmation() {
         Vector3 fromPosition = this.transform.position;
         Vector3 toPosition = player.transform.position;
         Vector3 direction = toPosition - fromPosition;
