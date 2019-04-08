@@ -5,12 +5,18 @@ ModelImporter:
   fileIDToRecycleName:
     100000: default
     100002: //RootNode
+    100004: male_002_Cube_056
     400000: default
     400002: //RootNode
+    400004: male_002_Cube_056
     2100000: defaultMat
+    2100002: female_Material_001
     2300000: default
+    2300002: male_002_Cube_056
     3300000: default
+    3300002: male_002_Cube_056
     4300000: default
+    4300002: male_002_Cube_056
   externalObjects: {}
   materials:
     importMaterials: 1

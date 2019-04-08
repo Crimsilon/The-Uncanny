@@ -1,25 +1,17 @@
 fileFormatVersion: 2
-guid: 4186c7092c1b26447a700cada230d803
+guid: 19b254bda98127c4fb11e38a77ac54e5
 ModelImporter:
   serializedVersion: 23
   fileIDToRecycleName:
-    100000: default
-    100002: //RootNode
-    100004: jackmerge_Cube_058
-    400000: default
-    400002: //RootNode
-    400004: jackmerge_Cube_058
-    2100000: defaultMat
-    2100002: jack_Material_001
-    2100004: jack_Material_008
-    2100006: jack_Material_009
-    2100008: jack_Material_007
-    2300000: default
-    2300002: jackmerge_Cube_058
-    3300000: default
-    3300002: jackmerge_Cube_058
-    4300000: default
-    4300002: jackmerge_Cube_058
+    100000: //RootNode
+    400000: //RootNode
+    2100000: jack_Material_001
+    2100002: jack_Material_008
+    2100004: jack_Material_009
+    2100006: jack_Material_007
+    2300000: //RootNode
+    3300000: //RootNode
+    4300000: jackmerge_Cube_058
   externalObjects: {}
   materials:
     importMaterials: 1
