@@ -33,6 +33,10 @@ public class turretRotation : MonoBehaviour {
         {
             transform.rotation = Quaternion.Euler(0f, maxRotation * Mathf.Sin(Time.time * speed), 0f);
         }
+        if (turretRotate == false)
+        {
+            transform.LookAt(target);
+        }
 
         if (playerInRange == true && turretStart == true)
         {
@@ -49,7 +53,6 @@ public class turretRotation : MonoBehaviour {
                 if (hit.collider.gameObject.tag == "Player")
                 {
                     turretRotate = false;
-                    transform.LookAt(target);
                     print("Whose footprints are these");
                     StartCoroutine(TimeToDie());
                     return;
@@ -82,16 +85,17 @@ public class turretRotation : MonoBehaviour {
     IEnumerator TimeToDie()
     {
         yield return new WaitForSeconds(1.5f);
-        if (playerInRange == true)
-        {
-            print("You are dead.");
-            turretRotate = true;
-        }
-        else
-        {
-            print("Must have been my imagination.");
-            turretRotate = true;
-        }
+        //if (playerInRange == true)
+        //{
+        //    print("You are dead.");
+        //    turretRotate = true;
+        //}
+        //else
+        //{
+        //    print("Must have been my imagination.");
+        //    turretRotate = true;
+        //}
+        HitConfirmation();
     }
 
     public void HitConfirmation() {
@@ -106,11 +110,13 @@ public class turretRotation : MonoBehaviour {
             if (hitConfirm.collider.gameObject.tag == "Player")
             {
                 print("You are dead");
+                turretRotate = true;
             }
-            if (playerInRange == false)
+            else
             {
                 print("Must have been my imagination");
                 turretStart = true;
+                turretRotate = true;
                 return;
             }
         }
