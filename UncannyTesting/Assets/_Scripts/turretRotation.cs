@@ -18,6 +18,10 @@ public class turretRotation : MonoBehaviour {
 
     public bool turretStart = true;
 
+    public Transform target;
+
+    public bool turretRotate = true;
+
     // Use this for initialization
     void Start() {
 
@@ -25,7 +29,14 @@ public class turretRotation : MonoBehaviour {
 
     // Update is called once per frame
     void Update() {
-        transform.rotation = Quaternion.Euler(0f, maxRotation * Mathf.Sin(Time.time * speed), 0f);
+        if (turretRotate == true)
+        {
+            transform.rotation = Quaternion.Euler(0f, maxRotation * Mathf.Sin(Time.time * speed), 0f);
+        }
+        if (turretRotate == false)
+        {
+            transform.LookAt(target);
+        }
 
         if (playerInRange == true && turretStart == true)
         {
@@ -41,24 +52,10 @@ public class turretRotation : MonoBehaviour {
                 print("!");
                 if (hit.collider.gameObject.tag == "Player")
                 {
+                    turretRotate = false;
                     print("Whose footprints are these");
                     StartCoroutine(TimeToDie());
-
-                    RaycastHit hitConfirm = new RaycastHit();
-
-                    if (Physics.Raycast(transform.position, direction, out hitConfirm))
-                    {
-                        if (hitConfirm.collider.gameObject.tag == "Player")
-                        {
-                            print("You are dead");
-                        }
-                        if (playerInRange == false)
-                        {
-                            print("Must have been my imagination");
-                            turretStart = true;
-                            return;
-                        }
-                    }
+                    return;
                 }
                 else
                 {
@@ -70,21 +67,38 @@ public class turretRotation : MonoBehaviour {
 
     private void OnTriggerEnter(Collider other)
     {
-        playerInRange = true;
+        if (other.gameObject.CompareTag("Player"))
+        {
+            playerInRange = true;
+        }
     }
 
     private void OnTriggerExit(Collider other)
     {
-        playerInRange = false;
-        turretStart = true;
+        if (other.gameObject.CompareTag("Player"))
+        {
+            playerInRange = false;
+            turretStart = true;
+        }
     }
 
     IEnumerator TimeToDie()
     {
         yield return new WaitForSeconds(1.5f);
+        //if (playerInRange == true)
+        //{
+        //    print("You are dead.");
+        //    turretRotate = true;
+        //}
+        //else
+        //{
+        //    print("Must have been my imagination.");
+        //    turretRotate = true;
+        //}
+        HitConfirmation();
     }
 
-    void HitConfirmation() {
+    public void HitConfirmation() {
         Vector3 fromPosition = this.transform.position;
         Vector3 toPosition = player.transform.position;
         Vector3 direction = toPosition - fromPosition;
@@ -96,11 +110,13 @@ public class turretRotation : MonoBehaviour {
             if (hitConfirm.collider.gameObject.tag == "Player")
             {
                 print("You are dead");
+                turretRotate = true;
             }
-            if (playerInRange == false)
+            else
             {
                 print("Must have been my imagination");
                 turretStart = true;
+                turretRotate = true;
                 return;
             }
         }
