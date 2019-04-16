@@ -46,19 +46,15 @@ public class turretRotation : MonoBehaviour {
             Vector3 direction = toPosition - fromPosition;
 
             RaycastHit hit = new RaycastHit();
+            Debug.DrawRay(transform.position, direction, Color.green, 2);
 
             if (Physics.Raycast(transform.position, direction, out hit))
             {
-                print("!");
-                if (hit.collider.gameObject.tag == "Player")
+                if (hit.collider.gameObject.CompareTag("Player"))
                 {
                     turretRotate = false;
                     print("Whose footprints are these");
                     StartCoroutine(TimeToDie());
-                    return;
-                }
-                else
-                {
                     return;
                 }
             }
@@ -95,7 +91,26 @@ public class turretRotation : MonoBehaviour {
         //    print("Must have been my imagination.");
         //    turretRotate = true;
         //}
-        HitConfirmation();
+        Vector3 fromPosition = this.transform.position;
+        Vector3 toPosition = player.transform.position;
+        Vector3 direction = toPosition - fromPosition;
+
+        RaycastHit hitConfirm = new RaycastHit();
+
+        if (Physics.Raycast(transform.position, direction, out hitConfirm))
+        {
+            if (hitConfirm.collider.gameObject.tag == "Player")
+            {
+                print("You are dead");
+                turretRotate = true;
+            }
+            else
+            {
+                print("Must have been my imagination");
+                turretStart = true;
+                turretRotate = true;
+            }
+        }
     }
 
     public void HitConfirmation() {
