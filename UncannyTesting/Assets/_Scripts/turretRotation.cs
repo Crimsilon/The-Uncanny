@@ -22,6 +22,8 @@ public class turretRotation : MonoBehaviour {
 
     public bool turretRotate = true;
 
+    public Transform shotFire;
+
     // Use this for initialization
     void Start() {
 
@@ -41,14 +43,14 @@ public class turretRotation : MonoBehaviour {
         if (playerInRange == true && turretStart == true)
         {
             turretStart = false;
-            Vector3 fromPosition = this.transform.position;
+            Vector3 fromPosition = shotFire.position;
             Vector3 toPosition = player.transform.position;
             Vector3 direction = toPosition - fromPosition;
 
             RaycastHit hit = new RaycastHit();
             Debug.DrawRay(transform.position, direction, Color.green, 2);
 
-            if (Physics.Raycast(transform.position, direction, out hit))
+            if (Physics.Raycast(shotFire.position, direction, out hit))
             {
                 if (hit.collider.gameObject.CompareTag("Player"))
                 {
@@ -91,36 +93,17 @@ public class turretRotation : MonoBehaviour {
         //    print("Must have been my imagination.");
         //    turretRotate = true;
         //}
-        Vector3 fromPosition = this.transform.position;
-        Vector3 toPosition = player.transform.position;
-        Vector3 direction = toPosition - fromPosition;
-
-        RaycastHit hitConfirm = new RaycastHit();
-
-        if (Physics.Raycast(transform.position, direction, out hitConfirm))
-        {
-            if (hitConfirm.collider.gameObject.tag == "Player")
-            {
-                print("You are dead");
-                turretRotate = true;
-            }
-            else
-            {
-                print("Must have been my imagination");
-                turretStart = true;
-                turretRotate = true;
-            }
-        }
+        HitConfirmation();
     }
 
     public void HitConfirmation() {
-        Vector3 fromPosition = this.transform.position;
+        Vector3 fromPosition = shotFire.position;
         Vector3 toPosition = player.transform.position;
         Vector3 direction = toPosition - fromPosition;
 
         RaycastHit hitConfirm = new RaycastHit();
 
-        if (Physics.Raycast(transform.position, direction, out hitConfirm))
+        if (Physics.Raycast(shotFire.position, direction, out hitConfirm))
         {
             if (hitConfirm.collider.gameObject.tag == "Player")
             {
