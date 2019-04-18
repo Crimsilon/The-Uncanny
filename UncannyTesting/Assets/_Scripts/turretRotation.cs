@@ -108,6 +108,8 @@ public class turretRotation : MonoBehaviour {
             if (hitConfirm.collider.gameObject.tag == "Player")
             {
                 print("You are dead");
+                
+                Destroy(player);
                 turretRotate = true;
             }
             else
