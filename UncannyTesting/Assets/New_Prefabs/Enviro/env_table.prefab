@@ -21,6 +21,7 @@ GameObject:
   - component: {fileID: 4292829712605154}
   - component: {fileID: 33056966895760146}
   - component: {fileID: 23745933057067926}
+  - component: {fileID: 136267559550850602}
   m_Layer: 0
   m_Name: env_table
   m_TagString: Untagged
@@ -56,7 +57,7 @@ MeshRenderer:
   m_ReflectionProbeUsage: 1
   m_RenderingLayerMask: 4294967295
   m_Materials:
-  - {fileID: 2100000, guid: 3189ea8872d2aaf488a0d0cee83ebc53, type: 3}
+  - {fileID: 2100000, guid: dcca8d6d98afc6040996cb41baf631ce, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -83,3 +84,16 @@ MeshFilter:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1501722836145560}
   m_Mesh: {fileID: 4300000, guid: 3189ea8872d2aaf488a0d0cee83ebc53, type: 3}
+--- !u!136 &136267559550850602
+CapsuleCollider:
+  m_ObjectHideFlags: 1
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1501722836145560}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  m_Radius: 0.01
+  m_Height: 1
+  m_Direction: 2
+  m_Center: {x: 4.656613e-10, y: 0.0003061471, z: -0.20863307}
