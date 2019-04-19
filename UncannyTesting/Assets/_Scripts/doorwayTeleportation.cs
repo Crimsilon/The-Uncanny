@@ -1,5 +1,6 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
+using UnityEngine.UI;
 using UnityEngine;
 
 public class doorwayTeleportation : MonoBehaviour {
@@ -10,15 +11,21 @@ public class doorwayTeleportation : MonoBehaviour {
 
     public Vector3 warpPoint;
 
-	// Use this for initialization
-	void Start () {
-		
+    public Image myPanel;
+    float fadeTime = 0.5f;
+    Color colorToFadeTo;
+
+    // Use this for initialization
+    void Start () {
+        
 	}
 	
 	// Update is called once per frame
 	void Update () {
         if (inDoorTrigger == true && Input.GetKeyDown(KeyCode.E))
         {
+            colorToFadeTo = new Color(0f, 0f, 0f, 1f);
+            myPanel.CrossFadeColor(colorToFadeTo, fadeTime, true, true);
             Time.timeScale = 0;
             StartCoroutine(teleportWait());
         }
@@ -29,6 +36,8 @@ public class doorwayTeleportation : MonoBehaviour {
         yield return new WaitForSecondsRealtime(2);
         player.transform.position = warpPoint;
         Time.timeScale = 1;
+        colorToFadeTo = new Color(0f, 0f, 0f, 0f);
+        myPanel.CrossFadeColor(colorToFadeTo, fadeTime, true, true);
     }
 
     private void OnTriggerEnter(Collider other)
