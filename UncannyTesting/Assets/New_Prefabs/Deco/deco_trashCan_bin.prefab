@@ -21,6 +21,7 @@ GameObject:
   - component: {fileID: 4462248971056138}
   - component: {fileID: 33042301615878252}
   - component: {fileID: 23824429615756908}
+  - component: {fileID: 136653444445844598}
   m_Layer: 0
   m_Name: deco_trashCan_bin
   m_TagString: Untagged
@@ -83,3 +84,16 @@ MeshFilter:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1564093034247652}
   m_Mesh: {fileID: 4300000, guid: 791835bbf691f904d808882d09039b3d, type: 3}
+--- !u!136 &136653444445844598
+CapsuleCollider:
+  m_ObjectHideFlags: 1
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1564093034247652}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  m_Radius: 0.01
+  m_Height: 0.05
+  m_Direction: 2
+  m_Center: {x: 0, y: -5.537478e-19, z: -0.00007793305}
