@@ -25553,25 +25553,19 @@ MonoBehaviour:
     - Friendly around here, huh...
   highVolumeObserveDialogue:
     name:
-    - 
-    - 
-    - 
-    - 
+    - Jack
     sentences:
     - It's too loud to talk in here...
   lowVolumeInteractDialogue:
     name:
-    - 
-    - 
-    - 
+    - NPC
+    - Jack
     sentences:
-    - Oh. what is it?
+    - Oh, what is it?
+    - Sure seem friendlier now...
   lowVolumeObserveDialogue:
     name:
-    - 
-    - 
-    - 
-    - 
+    - Jack
     sentences:
     - Should be able to chat now...
   observe: 0
