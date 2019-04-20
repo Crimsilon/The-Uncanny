@@ -9917,7 +9917,7 @@ Prefab:
     - target: {fileID: 224353813509505700, guid: d5c066cef523a254e8951a2f71ae714d,
         type: 2}
       propertyPath: m_RootOrder
-      value: 11
+      value: 10
       objectReference: {fileID: 0}
     - target: {fileID: 224353813509505700, guid: d5c066cef523a254e8951a2f71ae714d,
         type: 2}
@@ -14139,7 +14139,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 5
+  m_RootOrder: 6
   m_LocalEulerAnglesHint: {x: 50, y: -30, z: 0}
 --- !u!1 &792560626
 GameObject:
@@ -18143,7 +18143,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 2
+  m_RootOrder: 3
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &978676646
 GameObject:
@@ -21797,6 +21797,11 @@ Prefab:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 23408634791733350, guid: 595bbd306d7c35849a37a6c16f9d30f6,
+        type: 2}
+      propertyPath: m_Materials.Array.size
+      value: 6
+      objectReference: {fileID: 0}
     - target: {fileID: 4378613272757834, guid: 595bbd306d7c35849a37a6c16f9d30f6, type: 2}
       propertyPath: m_LocalPosition.x
       value: -2.5446951
@@ -21827,7 +21832,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 4378613272757834, guid: 595bbd306d7c35849a37a6c16f9d30f6, type: 2}
       propertyPath: m_RootOrder
-      value: 3
+      value: 2
       objectReference: {fileID: 0}
     - target: {fileID: 4378613272757834, guid: 595bbd306d7c35849a37a6c16f9d30f6, type: 2}
       propertyPath: m_LocalEulerAnglesHint.x
@@ -21841,6 +21846,36 @@ Prefab:
       propertyPath: m_TagString
       value: Player
       objectReference: {fileID: 0}
+    - target: {fileID: 23408634791733350, guid: 595bbd306d7c35849a37a6c16f9d30f6,
+        type: 2}
+      propertyPath: m_Materials.Array.data[4]
+      value: 
+      objectReference: {fileID: 2100016, guid: a2957cb0ccbefa145936d8adabadcab6, type: 3}
+    - target: {fileID: 23408634791733350, guid: 595bbd306d7c35849a37a6c16f9d30f6,
+        type: 2}
+      propertyPath: m_Materials.Array.data[5]
+      value: 
+      objectReference: {fileID: 2100018, guid: a2957cb0ccbefa145936d8adabadcab6, type: 3}
+    - target: {fileID: 23408634791733350, guid: 595bbd306d7c35849a37a6c16f9d30f6,
+        type: 2}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 2100008, guid: a2957cb0ccbefa145936d8adabadcab6, type: 3}
+    - target: {fileID: 23408634791733350, guid: 595bbd306d7c35849a37a6c16f9d30f6,
+        type: 2}
+      propertyPath: m_Materials.Array.data[1]
+      value: 
+      objectReference: {fileID: 2100010, guid: a2957cb0ccbefa145936d8adabadcab6, type: 3}
+    - target: {fileID: 23408634791733350, guid: 595bbd306d7c35849a37a6c16f9d30f6,
+        type: 2}
+      propertyPath: m_Materials.Array.data[2]
+      value: 
+      objectReference: {fileID: 2100012, guid: a2957cb0ccbefa145936d8adabadcab6, type: 3}
+    - target: {fileID: 23408634791733350, guid: 595bbd306d7c35849a37a6c16f9d30f6,
+        type: 2}
+      propertyPath: m_Materials.Array.data[3]
+      value: 
+      objectReference: {fileID: 2100014, guid: a2957cb0ccbefa145936d8adabadcab6, type: 3}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 595bbd306d7c35849a37a6c16f9d30f6, type: 2}
   m_IsPrefabAsset: 0
@@ -23283,7 +23318,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 4744466331128270, guid: 4659e94bf61db9342a61a192db790d8b, type: 2}
       propertyPath: m_RootOrder
-      value: 6
+      value: 5
       objectReference: {fileID: 0}
     - target: {fileID: 114516440584179346, guid: 4659e94bf61db9342a61a192db790d8b,
         type: 2}
@@ -23332,7 +23367,7 @@ Transform:
   - {fileID: 978676647}
   - {fileID: 1361723837}
   m_Father: {fileID: 0}
-  m_RootOrder: 10
+  m_RootOrder: 11
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!4 &1276877419 stripped
 Transform:
@@ -25508,19 +25543,35 @@ MonoBehaviour:
   dialogueBox: {fileID: 1061854859}
   scene: {fileID: 0}
   highVolumeInteractDialogue:
-    name: NPC
+    name:
+    - Jack
+    - NPC
+    - Jack
     sentences:
+    - Excuse me...
     - Go away!
+    - Friendly around here, huh...
   highVolumeObserveDialogue:
-    name: Jack
+    name:
+    - 
+    - 
+    - 
+    - 
     sentences:
     - It's too loud to talk in here...
   lowVolumeInteractDialogue:
-    name: NPC
+    name:
+    - 
+    - 
+    - 
     sentences:
     - Oh. what is it?
   lowVolumeObserveDialogue:
-    name: Jack
+    name:
+    - 
+    - 
+    - 
+    - 
     sentences:
     - Should be able to chat now...
   observe: 0
@@ -29621,21 +29672,37 @@ MonoBehaviour:
   dialogueBox: {fileID: 1061854859}
   scene: {fileID: 0}
   beforeKeyInteractDialogue:
-    name: Jack
+    name:
+    - 
+    - 
+    - 
+    - 
     sentences:
     - Can't jimmy my way into this one...
   beforeKeyObserveDialogue:
-    name: Jack
+    name:
+    - 
+    - 
+    - 
+    - 
     sentences:
     - This should work to turn down the music.
     - But I'm gonna need a key...
   afterKeyInteractDialogue:
-    name: Jack
+    name:
+    - 
+    - 
+    - 
+    - 
     sentences:
     - Here we go...
     - No more loud music.
   afterKeyObserveDialogue:
-    name: Jack
+    name:
+    - 
+    - 
+    - 
+    - 
     sentences:
     - Nothing else to do with this...
   observe: 0
