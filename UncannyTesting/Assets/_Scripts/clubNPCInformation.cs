@@ -110,6 +110,8 @@ public class clubNPCInformation : MonoBehaviour
 
     public GameObject dialogueBox;
 
+    public GameObject observeInteract;
+
     public GameObject scene;
 
     public Dialogue highVolumeInteractDialogue;
@@ -129,6 +131,7 @@ public class clubNPCInformation : MonoBehaviour
     {
         keysEnabled = true;
         dialogueBox.SetActive(false);
+        observeInteract.SetActive(false);
     }
 
     public void TriggerDialogue()
@@ -167,6 +170,7 @@ public class clubNPCInformation : MonoBehaviour
             ///Debug.Log("You are observing the Jeffko object");
             observe = true;
             keysEnabled = false;
+            observeInteract.SetActive(false);
             dialogueBox.SetActive(true);
             TriggerDialogue();
             Time.timeScale = 0;
@@ -178,6 +182,7 @@ public class clubNPCInformation : MonoBehaviour
             ///Debug.Log("You are interacting with the Jeffko object");
             observe = false;
             keysEnabled = false;
+            observeInteract.SetActive(false);
             dialogueBox.SetActive(true);
             TriggerDialogue();
             Time.timeScale = 0;
@@ -196,6 +201,7 @@ public class clubNPCInformation : MonoBehaviour
         if (other.gameObject.CompareTag("Player"))
         {
             Debug.Log("inTrigger is true");
+            observeInteract.SetActive(true);
             inTrigger = true;
         }
     }
@@ -205,6 +211,7 @@ public class clubNPCInformation : MonoBehaviour
         if (other.gameObject.CompareTag("Player"))
         {
             Debug.Log("inTrigger is false");
+            observeInteract.SetActive(false);
             inTrigger = false;
         }
     }
