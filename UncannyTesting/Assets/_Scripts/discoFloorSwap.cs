@@ -35,7 +35,7 @@ public class discoFloorSwap : MonoBehaviour {
 
     IEnumerator FloorSwap()
     {
-        yield return new WaitForSeconds(1.5f);
+        yield return new WaitForSeconds(0.8f);
         rNumber = Random.Range(1, 4);
         if (rNumber == 1)
         {
