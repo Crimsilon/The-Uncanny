@@ -101,7 +101,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class objectInformation : MonoBehaviour
+public class clubNPCInformation : MonoBehaviour
 {
 
     private bool inTrigger = false;
@@ -112,13 +112,17 @@ public class objectInformation : MonoBehaviour
 
     public GameObject scene;
 
-    public Dialogue interactDialogue;
+    public Dialogue highVolumeInteractDialogue;
 
-    public Dialogue observeDialogue;
+    public Dialogue highVolumeObserveDialogue;
+
+    public Dialogue lowVolumeInteractDialogue;
+
+    public Dialogue lowVolumeObserveDialogue;
 
     public bool observe = false;
 
-    public GameObject narrativeManager;
+    public narrativeManager narrativeManager;
 
     // Use this for initialization
     void Start()
@@ -129,14 +133,28 @@ public class objectInformation : MonoBehaviour
 
     public void TriggerDialogue()
     {
-        if (observe == false)
-        {
-            FindObjectOfType<dialogueManager>().StartDialogue(interactDialogue);
-        }
+        if (narrativeManager.VolumeDown) {
+            if (observe == false)
+            {
+                FindObjectOfType<dialogueManager>().StartDialogue(lowVolumeInteractDialogue);
+            }
 
-        if (observe == true)
+            if (observe == true)
+            {
+                FindObjectOfType<dialogueManager>().StartDialogue(lowVolumeObserveDialogue);
+            }
+        }
+        else
         {
-            FindObjectOfType<dialogueManager>().StartDialogue(observeDialogue);
+            if (observe == false)
+            {
+                FindObjectOfType<dialogueManager>().StartDialogue(highVolumeInteractDialogue);
+            }
+
+            if (observe == true)
+            {
+                FindObjectOfType<dialogueManager>().StartDialogue(highVolumeObserveDialogue);
+            }
         }
     }
 

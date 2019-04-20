@@ -3,20 +3,18 @@ using System.Collections.Generic;
 using UnityEngine;
 
 [System.Serializable]
-public class narrativeManager {
+public class narrativeManager : MonoBehaviour {
 
-    public bool VolumeDown = false;
-    public bool MagnetFound = false;
-    public bool KeyFound = false;
-    public bool CodeFound = false;
+    public bool VolumeDown;
+    public bool MagnetFound;
+    public bool KeyFound;
+    public bool CodeFound;
 
-	// Use this for initialization
-	void Start () {
-		
-	}
-	
-	// Update is called once per frame
-	void Update () {
-		
-	}
+    private void Start()
+    {
+        VolumeDown = false;
+        MagnetFound = false;
+        KeyFound = false;
+        CodeFound = false;
+    }
 }

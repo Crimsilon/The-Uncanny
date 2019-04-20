@@ -101,7 +101,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class objectInformation : MonoBehaviour
+public class DJTableScript : MonoBehaviour
 {
 
     private bool inTrigger = false;
@@ -112,13 +112,17 @@ public class objectInformation : MonoBehaviour
 
     public GameObject scene;
 
-    public Dialogue interactDialogue;
+    public Dialogue beforeKeyInteractDialogue;
 
-    public Dialogue observeDialogue;
+    public Dialogue beforeKeyObserveDialogue;
+
+    public Dialogue afterKeyInteractDialogue;
+
+    public Dialogue afterKeyObserveDialogue;
 
     public bool observe = false;
 
-    public GameObject narrativeManager;
+    public narrativeManager narrativeManager;
 
     // Use this for initialization
     void Start()
@@ -129,14 +133,30 @@ public class objectInformation : MonoBehaviour
 
     public void TriggerDialogue()
     {
-        if (observe == false)
+        if (narrativeManager.KeyFound)
         {
-            FindObjectOfType<dialogueManager>().StartDialogue(interactDialogue);
-        }
+            if (observe == false)
+            {
+                narrativeManager.VolumeDown = true;
+                FindObjectOfType<dialogueManager>().StartDialogue(afterKeyInteractDialogue);
+            }
 
-        if (observe == true)
+            if (observe == true)
+            {
+                FindObjectOfType<dialogueManager>().StartDialogue(afterKeyObserveDialogue);
+            }
+        }
+        else
         {
-            FindObjectOfType<dialogueManager>().StartDialogue(observeDialogue);
+            if (observe == false)
+            {
+                FindObjectOfType<dialogueManager>().StartDialogue(beforeKeyInteractDialogue);
+            }
+
+            if (observe == true)
+            {
+                FindObjectOfType<dialogueManager>().StartDialogue(beforeKeyObserveDialogue);
+            }
         }
     }
 

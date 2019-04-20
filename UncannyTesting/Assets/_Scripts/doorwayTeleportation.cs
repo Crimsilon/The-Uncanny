@@ -24,8 +24,8 @@ public class doorwayTeleportation : MonoBehaviour {
 	void Update () {
         if (inDoorTrigger == true && Input.GetKeyDown(KeyCode.E))
         {
-            colorToFadeTo = new Color(0f, 0f, 0f, 1f);
-            myPanel.CrossFadeColor(colorToFadeTo, fadeTime, true, true);
+            colorToFadeTo = new Color(0f, 0f, 0f, 255f);
+            myPanel.CrossFadeColor(colorToFadeTo, fadeTime, false, false);
             Time.timeScale = 0;
             StartCoroutine(teleportWait());
         }
@@ -37,7 +37,7 @@ public class doorwayTeleportation : MonoBehaviour {
         player.transform.position = warpPoint;
         Time.timeScale = 1;
         colorToFadeTo = new Color(0f, 0f, 0f, 0f);
-        myPanel.CrossFadeColor(colorToFadeTo, fadeTime, true, true);
+        myPanel.CrossFadeColor(colorToFadeTo, fadeTime, false, true);
     }
 
     private void OnTriggerEnter(Collider other)

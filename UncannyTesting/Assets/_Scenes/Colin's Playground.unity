@@ -15189,6 +15189,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 859692027}
+  - component: {fileID: 859692028}
   m_Layer: 0
   m_Name: narrativerManager
   m_TagString: Untagged
@@ -15209,6 +15210,21 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 7
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &859692028
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 859692026}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5d0177489d822c1459fd883a55c8399f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  VolumeDown: 0
+  MagnetFound: 0
+  KeyFound: 0
+  CodeFound: 0
 --- !u!1001 &860696735
 Prefab:
   m_ObjectHideFlags: 0
@@ -19702,6 +19718,11 @@ Transform:
   m_Father: {fileID: 1020343453}
   m_RootOrder: 4
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &1061854859 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 1740452711825590, guid: d5c066cef523a254e8951a2f71ae714d,
+    type: 2}
+  m_PrefabInternal: {fileID: 579000513}
 --- !u!1001 &1063835778
 Prefab:
   m_ObjectHideFlags: 0
@@ -23134,12 +23155,12 @@ Prefab:
         type: 2}
       propertyPath: nameText
       value: 
-      objectReference: {fileID: 0}
+      objectReference: {fileID: 1789518691}
     - target: {fileID: 114516440584179346, guid: 4659e94bf61db9342a61a192db790d8b,
         type: 2}
       propertyPath: dialogueText
       value: 
-      objectReference: {fileID: 0}
+      objectReference: {fileID: 1788540226}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 4659e94bf61db9342a61a192db790d8b, type: 2}
   m_IsPrefabAsset: 0
@@ -25309,6 +25330,79 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 4904512352088162, guid: 0de957dd96e56f349a8dc1ddcb188803,
     type: 2}
   m_PrefabInternal: {fileID: 1417461592}
+--- !u!1 &1419151523
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1419151524}
+  - component: {fileID: 1419151526}
+  - component: {fileID: 1419151525}
+  m_Layer: 0
+  m_Name: TriggerBox
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1419151524
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1419151523}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 2083304294}
+  m_RootOrder: 2
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1419151525
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1419151523}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 275daac496202f84582a4283f7746d92, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  dialogueBox: {fileID: 1061854859}
+  scene: {fileID: 0}
+  highVolumeInteractDialogue:
+    name: NPC
+    sentences:
+    - Go away!
+  highVolumeObserveDialogue:
+    name: Jack
+    sentences:
+    - It's too loud to talk in here...
+  lowVolumeInteractDialogue:
+    name: NPC
+    sentences:
+    - Oh. what is it?
+  lowVolumeObserveDialogue:
+    name: Jack
+    sentences:
+    - Should be able to chat now...
+  observe: 0
+  narrativeManager: {fileID: 859692028}
+--- !u!65 &1419151526
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1419151523}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 1.2036092, y: 1.2068894, z: 1.2985567}
+  m_Center: {x: 0.01945245, y: 0.8242444, z: -0.052681103}
 --- !u!1001 &1420122552
 Prefab:
   m_ObjectHideFlags: 0
@@ -29327,6 +29421,81 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 4105351265473918, guid: 9292083cd4d746947bf0ed2ab8ec6656,
     type: 2}
   m_PrefabInternal: {fileID: 1642416807}
+--- !u!1 &1647153545
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1647153546}
+  - component: {fileID: 1647153548}
+  - component: {fileID: 1647153547}
+  m_Layer: 0
+  m_Name: triggerBox
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1647153546
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1647153545}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 1242191917}
+  m_RootOrder: 0
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1647153547
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1647153545}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7034c48c22738b340a658ad8be6c5382, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  dialogueBox: {fileID: 1061854859}
+  scene: {fileID: 0}
+  beforeKeyInteractDialogue:
+    name: Jack
+    sentences:
+    - Can't jimmy my way into this one...
+  beforeKeyObserveDialogue:
+    name: Jack
+    sentences:
+    - This should work to turn down the music.
+    - But I'm gonna need a key...
+  afterKeyInteractDialogue:
+    name: Jack
+    sentences:
+    - Here we go...
+    - No more loud music.
+  afterKeyObserveDialogue:
+    name: Jack
+    sentences:
+    - Nothing else to do with this...
+  observe: 0
+  narrativeManager: {fileID: 859692028}
+--- !u!65 &1647153548
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1647153545}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 0.035600904, y: 0.021425165, z: 0.007194973}
+  m_Center: {x: 0.00011086215, y: -0.004299102, z: -0.0022099828}
 --- !u!1001 &1651339547
 Prefab:
   m_ObjectHideFlags: 0
@@ -32088,6 +32257,18 @@ Transform:
   m_Father: {fileID: 2020886303}
   m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1788540226 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 114876268107276772, guid: d5c066cef523a254e8951a2f71ae714d,
+    type: 2}
+  m_PrefabInternal: {fileID: 579000513}
+  m_Script: {fileID: 708705254, guid: f70555f144d8491a825f0804e09c671c, type: 3}
+--- !u!114 &1789518691 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 114266270713981544, guid: d5c066cef523a254e8951a2f71ae714d,
+    type: 2}
+  m_PrefabInternal: {fileID: 579000513}
+  m_Script: {fileID: 708705254, guid: f70555f144d8491a825f0804e09c671c, type: 3}
 --- !u!1001 &1789683898
 Prefab:
   m_ObjectHideFlags: 0
