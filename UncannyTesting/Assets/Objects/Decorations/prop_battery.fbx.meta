@@ -1,16 +1,14 @@
 fileFormatVersion: 2
-guid: fcd948311b9774d40b7509db4ecd3125
+guid: 0bc2e1afd2d16d74f803703dff07f229
 ModelImporter:
   serializedVersion: 23
   fileIDToRecycleName:
     100000: //RootNode
     400000: //RootNode
-    2100000: Material.001
-    2100002: No Name
+    2100000: No Name
     2300000: //RootNode
     3300000: //RootNode
-    4300000: male.002
-    4300002: female
+    4300000: ElectricBox
   externalObjects: {}
   materials:
     importMaterials: 1
