@@ -101,7 +101,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class objectInformation : MonoBehaviour
+public class magnetScript : MonoBehaviour
 {
 
     private bool inTrigger = false;
@@ -110,33 +110,37 @@ public class objectInformation : MonoBehaviour
 
     public GameObject dialogueBox;
 
+    public GameObject observeInteract;
+
     public GameObject scene;
 
-    public Dialogue interactDialogue;
+    public Dialogue InteractDialogue;
 
-    public Dialogue observeDialogue;
+    public Dialogue ObserveDialogue;
 
     public bool observe = false;
 
-    public GameObject narrativeManager;
+    public narrativeManager narrativeManager;
 
     // Use this for initialization
     void Start()
     {
         keysEnabled = true;
         dialogueBox.SetActive(false);
+        observeInteract.SetActive(false);
     }
 
     public void TriggerDialogue()
     {
         if (observe == false)
         {
-            FindObjectOfType<dialogueManager>().StartDialogue(interactDialogue);
+            narrativeManager.MagnetFound = true;
+            FindObjectOfType<dialogueManager>().StartDialogue(InteractDialogue);
         }
 
         if (observe == true)
         {
-            FindObjectOfType<dialogueManager>().StartDialogue(observeDialogue);
+            FindObjectOfType<dialogueManager>().StartDialogue(ObserveDialogue);
         }
     }
 
@@ -149,6 +153,7 @@ public class objectInformation : MonoBehaviour
             ///Debug.Log("You are observing the Jeffko object");
             observe = true;
             keysEnabled = false;
+            observeInteract.SetActive(false);
             dialogueBox.SetActive(true);
             TriggerDialogue();
             Time.timeScale = 0;
@@ -160,6 +165,7 @@ public class objectInformation : MonoBehaviour
             ///Debug.Log("You are interacting with the Jeffko object");
             observe = false;
             keysEnabled = false;
+            observeInteract.SetActive(false);
             dialogueBox.SetActive(true);
             TriggerDialogue();
             Time.timeScale = 0;
@@ -178,6 +184,7 @@ public class objectInformation : MonoBehaviour
         if (other.gameObject.CompareTag("Player"))
         {
             Debug.Log("inTrigger is true");
+            observeInteract.SetActive(true);
             inTrigger = true;
         }
     }
@@ -187,6 +194,7 @@ public class objectInformation : MonoBehaviour
         if (other.gameObject.CompareTag("Player"))
         {
             Debug.Log("inTrigger is false");
+            observeInteract.SetActive(false);
             inTrigger = false;
         }
     }

@@ -1,5 +1,5 @@
 fileFormatVersion: 2
-guid: 0bc2e1afd2d16d74f803703dff07f229
+guid: 8304421b12f7e164095a5cda074c0d80
 ModelImporter:
   serializedVersion: 23
   fileIDToRecycleName:
@@ -8,7 +8,7 @@ ModelImporter:
     2100000: No Name
     2300000: //RootNode
     3300000: //RootNode
-    4300000: ElectricBox
+    4300000: hair_f_2.001
   externalObjects: {}
   materials:
     importMaterials: 1

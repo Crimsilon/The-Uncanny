@@ -1,5 +1,5 @@
 fileFormatVersion: 2
-guid: 927b9927e18bd7b49aeee4c59b498a9f
+guid: 5caaf9bc28b84c14fa4a5f6b4e2bee43
 ModelImporter:
   serializedVersion: 23
   fileIDToRecycleName:
@@ -8,7 +8,7 @@ ModelImporter:
     2100000: No Name
     2300000: //RootNode
     3300000: //RootNode
-    4300000: Walllight
+    4300000: hair_f_3
   externalObjects: {}
   materials:
     importMaterials: 1
