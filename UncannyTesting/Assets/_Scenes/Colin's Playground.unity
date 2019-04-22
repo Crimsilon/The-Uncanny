@@ -23583,6 +23583,124 @@ Transform:
   m_Father: {fileID: 87002493}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &1166913101
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 1585783424728398, guid: 7c933bae1e637ec40910c700fb7ccc62,
+    type: 2}
+  m_PrefabInternal: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1166913102}
+  - component: {fileID: 1166913104}
+  - component: {fileID: 1166913103}
+  m_Layer: 0
+  m_Name: TriggerBox
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1166913102
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 4637810153053320, guid: 7c933bae1e637ec40910c700fb7ccc62,
+    type: 2}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1166913101}
+  m_LocalRotation: {x: -0, y: -0.21678495, z: -0, w: 0.9762194}
+  m_LocalPosition: {x: -0.29, y: 0, z: -0.17}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 1697091649}
+  m_RootOrder: 2
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1166913103
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 114108556165725218, guid: 7c933bae1e637ec40910c700fb7ccc62,
+    type: 2}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1166913101}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 275daac496202f84582a4283f7746d92, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  dialogueBox: {fileID: 1061854859}
+  observeInteract: {fileID: 468984924}
+  scene: {fileID: 0}
+  highVolumeInteractDialogue:
+    name:
+    - Jack
+    - Patron
+    - Jack
+    - Patron
+    - Jack
+    sentences:
+    - EXCUSE ME.
+    - YES, HON?
+    - WHAT?
+    - IT'S A LITTLE NOISY IN HERE, DON'T YOU THINK?
+    - WHAT?
+  highVolumeObserveDialogue:
+    name:
+    - Jack
+    sentences:
+    - It's too loud to talk in here...
+  lowVolumeInteractDialogue:
+    name:
+    - Jack
+    - Juliet
+    - Jack
+    - Juliet
+    - Jack
+    - Juliet
+    - Jack
+    - Juliet
+    - Jack
+    - Juliet
+    - Jack
+    - Juliet
+    - Jack
+    sentences:
+    - Excuse me.
+    - Hey, Sugar. What brings a well-dressed man like you to such a bleak part of
+      town?
+    - "I\u2019m Jack. I\u2019m looking for information on a love drug, maybe you know
+      about it?"
+    - "Juliet, and what you\u2019re looking for is a Love Potion, darling."
+    - I beg your pardon?
+    - "I\u2019m not supposed to talk too much about it, but for such an enchanting
+      man like yourself\u2026"
+    - Can you just tell me where I can get it from?
+    - Looking to join the fun, babe?
+    - Something like that...
+    - "Talk to Ryan, he\u2019s right over there. He\u2019s got what you need, sweet
+      heart."
+    - "Thanks, you\u2019ve been a big help."
+    - "Maybe we could get a room later\u2026 if you wanted to return the favor?"
+    - Get home safe, Juliet.
+  lowVolumeObserveDialogue:
+    name:
+    - Jack
+    sentences:
+    - Should be able to chat now...
+  observe: 0
+  narrativeManager: {fileID: 859692028}
+--- !u!65 &1166913104
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 65725255642415768, guid: 7c933bae1e637ec40910c700fb7ccc62,
+    type: 2}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1166913101}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 1.2036092, y: 1.2068894, z: 1.2985567}
+  m_Center: {x: 0.01945245, y: 0.8242444, z: -0.052681103}
 --- !u!1 &1166983090
 GameObject:
   m_ObjectHideFlags: 0
@@ -27937,12 +28055,12 @@ MonoBehaviour:
   highVolumeInteractDialogue:
     name:
     - Jack
-    - NPC
+    - Patron
     - Jack
     sentences:
-    - Excuse me...
-    - Go away!
-    - Friendly around here, huh...
+    - EXCUSE ME.
+    - GO AWAY!
+    - WHAT?
   highVolumeObserveDialogue:
     name:
     - Jack
@@ -27950,11 +28068,18 @@ MonoBehaviour:
     - It's too loud to talk in here...
   lowVolumeInteractDialogue:
     name:
-    - NPC
+    - Jack
+    - Patron
+    - Jack
+    - Patron
     - Jack
     sentences:
-    - Oh, what is it?
-    - Sure seem friendlier now...
+    - Excuse me.
+    - Oh, what's up?
+    - I'm looking for a Love Drug.
+    - Well, you've found him. That's what they call me, 'cause my personality is so
+      intoxicating.
+    - Alright, well. I don't think you're what I'm looking for. I'll leave you be.
   lowVolumeObserveDialogue:
     name:
     - Jack
@@ -42678,6 +42803,16 @@ Prefab:
   m_Modification:
     m_TransformParent: {fileID: 1853754448}
     m_Modifications:
+    - target: {fileID: 114108556165725218, guid: 7c933bae1e637ec40910c700fb7ccc62,
+        type: 2}
+      propertyPath: lowVolumeInteractDialogue.name.Array.size
+      value: 5
+      objectReference: {fileID: 0}
+    - target: {fileID: 114108556165725218, guid: 7c933bae1e637ec40910c700fb7ccc62,
+        type: 2}
+      propertyPath: lowVolumeInteractDialogue.sentences.Array.size
+      value: 5
+      objectReference: {fileID: 0}
     - target: {fileID: 4807139401320680, guid: 7c933bae1e637ec40910c700fb7ccc62, type: 2}
       propertyPath: m_LocalPosition.x
       value: -10.75
@@ -42735,6 +42870,68 @@ Prefab:
       propertyPath: waypoint.Array.data[1]
       value: 
       objectReference: {fileID: 2060282866}
+    - target: {fileID: 114108556165725218, guid: 7c933bae1e637ec40910c700fb7ccc62,
+        type: 2}
+      propertyPath: highVolumeInteractDialogue.name.Array.data[1]
+      value: Patron
+      objectReference: {fileID: 0}
+    - target: {fileID: 114108556165725218, guid: 7c933bae1e637ec40910c700fb7ccc62,
+        type: 2}
+      propertyPath: highVolumeInteractDialogue.sentences.Array.data[0]
+      value: EXCUSE ME.
+      objectReference: {fileID: 0}
+    - target: {fileID: 114108556165725218, guid: 7c933bae1e637ec40910c700fb7ccc62,
+        type: 2}
+      propertyPath: highVolumeInteractDialogue.sentences.Array.data[1]
+      value: GO AWAY!
+      objectReference: {fileID: 0}
+    - target: {fileID: 114108556165725218, guid: 7c933bae1e637ec40910c700fb7ccc62,
+        type: 2}
+      propertyPath: highVolumeInteractDialogue.sentences.Array.data[2]
+      value: WHAT?
+      objectReference: {fileID: 0}
+    - target: {fileID: 114108556165725218, guid: 7c933bae1e637ec40910c700fb7ccc62,
+        type: 2}
+      propertyPath: lowVolumeInteractDialogue.name.Array.data[0]
+      value: Jack
+      objectReference: {fileID: 0}
+    - target: {fileID: 114108556165725218, guid: 7c933bae1e637ec40910c700fb7ccc62,
+        type: 2}
+      propertyPath: lowVolumeInteractDialogue.name.Array.data[1]
+      value: Patron
+      objectReference: {fileID: 0}
+    - target: {fileID: 114108556165725218, guid: 7c933bae1e637ec40910c700fb7ccc62,
+        type: 2}
+      propertyPath: lowVolumeInteractDialogue.name.Array.data[3]
+      value: Patron
+      objectReference: {fileID: 0}
+    - target: {fileID: 114108556165725218, guid: 7c933bae1e637ec40910c700fb7ccc62,
+        type: 2}
+      propertyPath: lowVolumeInteractDialogue.sentences.Array.data[0]
+      value: Excuse me.
+      objectReference: {fileID: 0}
+    - target: {fileID: 114108556165725218, guid: 7c933bae1e637ec40910c700fb7ccc62,
+        type: 2}
+      propertyPath: lowVolumeInteractDialogue.sentences.Array.data[1]
+      value: Oh, what's up?
+      objectReference: {fileID: 0}
+    - target: {fileID: 114108556165725218, guid: 7c933bae1e637ec40910c700fb7ccc62,
+        type: 2}
+      propertyPath: lowVolumeInteractDialogue.sentences.Array.data[2]
+      value: I'm looking for a Love Drug.
+      objectReference: {fileID: 0}
+    - target: {fileID: 114108556165725218, guid: 7c933bae1e637ec40910c700fb7ccc62,
+        type: 2}
+      propertyPath: lowVolumeInteractDialogue.sentences.Array.data[3]
+      value: Well, you've found him. That's what they call me, 'cause my personality
+        is so intoxicating.
+      objectReference: {fileID: 0}
+    - target: {fileID: 114108556165725218, guid: 7c933bae1e637ec40910c700fb7ccc62,
+        type: 2}
+      propertyPath: lowVolumeInteractDialogue.sentences.Array.data[4]
+      value: Alright, well. I don't think you're what I'm looking for. I'll leave
+        you be.
+      objectReference: {fileID: 0}
     m_RemovedComponents:
     - {fileID: 64849987843010622, guid: 7c933bae1e637ec40910c700fb7ccc62, type: 2}
   m_SourcePrefab: {fileID: 100100000, guid: 7c933bae1e637ec40910c700fb7ccc62, type: 2}
