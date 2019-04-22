@@ -29,6 +29,8 @@ public class playerController : MonoBehaviour {
     {
         rb = GetComponent<Rigidbody>();
         rb.constraints = RigidbodyConstraints.FreezePosition | RigidbodyConstraints.FreezeRotation;
+        anim = GetComponent<Animator>();
+        anim.SetBool("isWalking", false);
     }
 
     // Update is called once per frame
@@ -41,36 +43,41 @@ public class playerController : MonoBehaviour {
 
         if (Input.GetKey(KeyCode.D))
         {
+            anim.SetBool("isWalking", true);
             rb.constraints = RigidbodyConstraints.FreezePositionY | RigidbodyConstraints.FreezeRotation;
             rb.velocity = m_XAxis;
-            Quaternion rotation = Quaternion.LookRotation(Vector3.up, Vector3.left);
+            Quaternion rotation = Quaternion.LookRotation(Vector3.right, Vector3.up);
             transform.rotation = rotation;
         }
 
         else if (Input.GetKey(KeyCode.A))
         {
+            anim.SetBool("isWalking", true);
             rb.constraints = RigidbodyConstraints.FreezePositionY | RigidbodyConstraints.FreezeRotation;
             rb.velocity = -m_XAxis;
-            Quaternion rotation = Quaternion.LookRotation(Vector3.up, Vector3.right);
+            Quaternion rotation = Quaternion.LookRotation(Vector3.left, Vector3.up);
             transform.rotation = rotation;
         }
         else if (Input.GetKey(KeyCode.W))
         {
+            anim.SetBool("isWalking", true);
             rb.constraints = RigidbodyConstraints.FreezePositionY | RigidbodyConstraints.FreezeRotation;
             rb.velocity = m_ZAxis;
-            Quaternion rotation = Quaternion.LookRotation(Vector3.up, Vector3.back);
+            Quaternion rotation = Quaternion.LookRotation(Vector3.forward, Vector3.up);
             transform.rotation = rotation;
         }
         else if (Input.GetKey(KeyCode.S))
         {
+            anim.SetBool("isWalking", true);
             rb.constraints = RigidbodyConstraints.FreezePositionY | RigidbodyConstraints.FreezeRotation;
             rb.velocity = -m_ZAxis;
-            Quaternion rotation = Quaternion.LookRotation(Vector3.up, Vector3.forward);
+            Quaternion rotation = Quaternion.LookRotation(Vector3.back, Vector3.up);
             transform.rotation = rotation;
         }
 
         else
         {
+            anim.SetBool("isWalking", false);
             rb.constraints = RigidbodyConstraints.FreezePosition | RigidbodyConstraints.FreezeRotation;
         }
 
