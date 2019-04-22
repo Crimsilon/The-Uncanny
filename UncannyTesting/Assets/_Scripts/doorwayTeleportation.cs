@@ -11,19 +11,22 @@ public class doorwayTeleportation : MonoBehaviour {
 
     public Vector3 warpPoint;
 
+    public GameObject interactPrompt;
+
     public Image myPanel;
     float fadeTime = 0.5f;
-    Color colorToFadeTo;
+    public Color colorToFadeTo;
 
     // Use this for initialization
     void Start () {
-        
+        interactPrompt.SetActive(false);
 	}
 	
 	// Update is called once per frame
 	void Update () {
         if (inDoorTrigger == true && Input.GetKeyDown(KeyCode.E))
         {
+            interactPrompt.SetActive(false);
             colorToFadeTo = new Color(0f, 0f, 0f, 255f);
             myPanel.CrossFadeColor(colorToFadeTo, fadeTime, false, false);
             Time.timeScale = 0;
@@ -44,6 +47,7 @@ public class doorwayTeleportation : MonoBehaviour {
     {
         if (other.gameObject.CompareTag("Player"))
         {
+            interactPrompt.SetActive(true);
             Debug.Log("inTrigger is true");
             inDoorTrigger = true;
         }
@@ -53,6 +57,7 @@ public class doorwayTeleportation : MonoBehaviour {
     {
         if (other.gameObject.CompareTag("Player"))
         {
+            interactPrompt.SetActive(false);
             Debug.Log("inTrigger is false");
             inDoorTrigger = false;
         }
