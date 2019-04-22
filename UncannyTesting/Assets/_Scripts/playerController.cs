@@ -21,6 +21,8 @@ public class playerController : MonoBehaviour {
     public float moveSpeed = 10f;
     public float turnSpeed = 50f;
 
+    Animator anim;
+
 
     // Use this for initialization
     void Start()
@@ -41,7 +43,7 @@ public class playerController : MonoBehaviour {
         {
             rb.constraints = RigidbodyConstraints.FreezePositionY | RigidbodyConstraints.FreezeRotation;
             rb.velocity = m_XAxis;
-            Quaternion rotation = Quaternion.LookRotation(Vector3.right, Vector3.up);
+            Quaternion rotation = Quaternion.LookRotation(Vector3.up, Vector3.left);
             transform.rotation = rotation;
         }
 
@@ -49,21 +51,21 @@ public class playerController : MonoBehaviour {
         {
             rb.constraints = RigidbodyConstraints.FreezePositionY | RigidbodyConstraints.FreezeRotation;
             rb.velocity = -m_XAxis;
-            Quaternion rotation = Quaternion.LookRotation(Vector3.left, Vector3.up);
+            Quaternion rotation = Quaternion.LookRotation(Vector3.up, Vector3.right);
             transform.rotation = rotation;
         }
         else if (Input.GetKey(KeyCode.W))
         {
             rb.constraints = RigidbodyConstraints.FreezePositionY | RigidbodyConstraints.FreezeRotation;
             rb.velocity = m_ZAxis;
-            Quaternion rotation = Quaternion.LookRotation(Vector3.forward, Vector3.up);
+            Quaternion rotation = Quaternion.LookRotation(Vector3.up, Vector3.back);
             transform.rotation = rotation;
         }
         else if (Input.GetKey(KeyCode.S))
         {
             rb.constraints = RigidbodyConstraints.FreezePositionY | RigidbodyConstraints.FreezeRotation;
             rb.velocity = -m_ZAxis;
-            Quaternion rotation = Quaternion.LookRotation(Vector3.back, Vector3.up);
+            Quaternion rotation = Quaternion.LookRotation(Vector3.up, Vector3.forward);
             transform.rotation = rotation;
         }
 

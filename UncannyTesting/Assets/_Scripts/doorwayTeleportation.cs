@@ -1,5 +1,6 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
+using UnityEngine.UI;
 using UnityEngine;
 
 public class doorwayTeleportation : MonoBehaviour {
@@ -10,15 +11,24 @@ public class doorwayTeleportation : MonoBehaviour {
 
     public Vector3 warpPoint;
 
-	// Use this for initialization
-	void Start () {
-		
+    public GameObject interactPrompt;
+
+    public Image myPanel;
+    float fadeTime = 0.5f;
+    public Color colorToFadeTo;
+
+    // Use this for initialization
+    void Start () {
+        interactPrompt.SetActive(false);
 	}
 	
 	// Update is called once per frame
 	void Update () {
         if (inDoorTrigger == true && Input.GetKeyDown(KeyCode.E))
         {
+            interactPrompt.SetActive(false);
+            colorToFadeTo = new Color(0f, 0f, 0f, 255f);
+            myPanel.CrossFadeColor(colorToFadeTo, fadeTime, false, false);
             Time.timeScale = 0;
             StartCoroutine(teleportWait());
         }
@@ -29,12 +39,15 @@ public class doorwayTeleportation : MonoBehaviour {
         yield return new WaitForSecondsRealtime(2);
         player.transform.position = warpPoint;
         Time.timeScale = 1;
+        colorToFadeTo = new Color(0f, 0f, 0f, 0f);
+        myPanel.CrossFadeColor(colorToFadeTo, fadeTime, false, true);
     }
 
     private void OnTriggerEnter(Collider other)
     {
         if (other.gameObject.CompareTag("Player"))
         {
+            interactPrompt.SetActive(true);
             Debug.Log("inTrigger is true");
             inDoorTrigger = true;
         }
@@ -44,6 +57,7 @@ public class doorwayTeleportation : MonoBehaviour {
     {
         if (other.gameObject.CompareTag("Player"))
         {
+            interactPrompt.SetActive(false);
             Debug.Log("inTrigger is false");
             inDoorTrigger = false;
         }

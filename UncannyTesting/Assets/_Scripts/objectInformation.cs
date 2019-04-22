@@ -118,6 +118,8 @@ public class objectInformation : MonoBehaviour
 
     public bool observe = false;
 
+    public GameObject narrativeManager;
+
     // Use this for initialization
     void Start()
     {

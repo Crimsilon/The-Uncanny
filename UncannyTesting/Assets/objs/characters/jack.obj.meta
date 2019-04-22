@@ -5,12 +5,21 @@ ModelImporter:
   fileIDToRecycleName:
     100000: default
     100002: //RootNode
+    100004: jackmerge_Cube_058
     400000: default
     400002: //RootNode
+    400004: jackmerge_Cube_058
     2100000: defaultMat
+    2100002: jack_Material_001
+    2100004: jack_Material_008
+    2100006: jack_Material_009
+    2100008: jack_Material_007
     2300000: default
+    2300002: jackmerge_Cube_058
     3300000: default
+    3300002: jackmerge_Cube_058
     4300000: default
+    4300002: jackmerge_Cube_058
   externalObjects: {}
   materials:
     importMaterials: 1
