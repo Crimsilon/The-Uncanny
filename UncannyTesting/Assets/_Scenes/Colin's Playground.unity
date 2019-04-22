@@ -6035,6 +6035,10 @@ Prefab:
       propertyPath: m_RootOrder
       value: 2
       objectReference: {fileID: 0}
+    - target: {fileID: 4460253397151646, guid: 377a5bf300b6785408ce5d37cc37414d, type: 2}
+      propertyPath: m_RootOrder
+      value: 2
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 377a5bf300b6785408ce5d37cc37414d, type: 2}
   m_IsPrefabAsset: 0
@@ -11039,6 +11043,31 @@ Prefab:
       propertyPath: m_RootOrder
       value: 2
       objectReference: {fileID: 0}
+    - target: {fileID: 114876268107276772, guid: d5c066cef523a254e8951a2f71ae714d,
+        type: 2}
+      propertyPath: m_FontData.m_HorizontalOverflow
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 224764963634445598, guid: d5c066cef523a254e8951a2f71ae714d,
+        type: 2}
+      propertyPath: m_SizeDelta.y
+      value: 90
+      objectReference: {fileID: 0}
+    - target: {fileID: 224764963634445598, guid: d5c066cef523a254e8951a2f71ae714d,
+        type: 2}
+      propertyPath: m_AnchoredPosition.y
+      value: -34
+      objectReference: {fileID: 0}
+    - target: {fileID: 224764963634445598, guid: d5c066cef523a254e8951a2f71ae714d,
+        type: 2}
+      propertyPath: m_SizeDelta.x
+      value: 440
+      objectReference: {fileID: 0}
+    - target: {fileID: 224764963634445598, guid: d5c066cef523a254e8951a2f71ae714d,
+        type: 2}
+      propertyPath: m_AnchoredPosition.x
+      value: -28
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: d5c066cef523a254e8951a2f71ae714d, type: 2}
   m_IsPrefabAsset: 0
@@ -13924,6 +13953,106 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 4654027212009856, guid: 3a150826dcac03f4ca2986fb67a8c956,
     type: 2}
   m_PrefabInternal: {fileID: 797703207}
+--- !u!1 &699858354
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 1585783424728398, guid: 7c933bae1e637ec40910c700fb7ccc62,
+    type: 2}
+  m_PrefabInternal: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 699858355}
+  - component: {fileID: 699858357}
+  - component: {fileID: 699858356}
+  m_Layer: 0
+  m_Name: TriggerBox
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &699858355
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 4637810153053320, guid: 7c933bae1e637ec40910c700fb7ccc62,
+    type: 2}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 699858354}
+  m_LocalRotation: {x: -0, y: -0.14769724, z: -0, w: 0.9890327}
+  m_LocalPosition: {x: -0.21, y: 0, z: -0.14}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 1151656298}
+  m_RootOrder: 1
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &699858356
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 114108556165725218, guid: 7c933bae1e637ec40910c700fb7ccc62,
+    type: 2}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 699858354}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 275daac496202f84582a4283f7746d92, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  dialogueBox: {fileID: 1061854859}
+  observeInteract: {fileID: 468984924}
+  scene: {fileID: 0}
+  highVolumeInteractDialogue:
+    name:
+    - Jack
+    - NPC
+    - Jack
+    - NPC
+    sentences:
+    - EXCUSE ME.
+    - HEY, HOW YOU DOIN' MAN?
+    - WHAT?
+    - IT'S TOO LOUD IN HERE, PAL.
+  highVolumeObserveDialogue:
+    name:
+    - Jack
+    - Jack
+    sentences:
+    - It's too loud to talk in here...
+    - I've gotta turn the music down.
+  lowVolumeInteractDialogue:
+    name:
+    - Jack
+    - NPC
+    - Jack
+    - Jack
+    - NPC
+    - Jack
+    sentences:
+    - Excuse me.
+    - Hey man, is there something I can help you with?
+    - I'm looking for a love drug.
+    - Maybe you've heard some rumors?
+    - I don't know anything about that, sounds cool though.
+    - It's not...ugh...nevermind.
+  lowVolumeObserveDialogue:
+    name:
+    - Jack
+    sentences:
+    - I should be able to chat now...
+  observe: 0
+  narrativeManager: {fileID: 859692028}
+--- !u!65 &699858357
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 65725255642415768, guid: 7c933bae1e637ec40910c700fb7ccc62,
+    type: 2}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 699858354}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 1.2036092, y: 1.2068894, z: 1.2985567}
+  m_Center: {x: 0.01945245, y: 0.8242444, z: -0.052681103}
 --- !u!4 &701895688 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 4020190927071738, guid: 518a1978904493846bf64b0408f6ca26,
@@ -17738,6 +17867,92 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 4654027212009856, guid: 3a150826dcac03f4ca2986fb67a8c956,
     type: 2}
   m_PrefabInternal: {fileID: 896478838}
+--- !u!1 &898525117
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 898525118}
+  - component: {fileID: 898525120}
+  - component: {fileID: 898525119}
+  m_Layer: 0
+  m_Name: TriggerVolume
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &898525118
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 898525117}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 2114874017}
+  m_RootOrder: 0
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &898525119
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 898525117}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 148725f3f01a44b4fbf5233d46b434cd, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  dialogueBox: {fileID: 1061854859}
+  observeInteract: {fileID: 468984924}
+  scene: {fileID: 0}
+  beforeMagnetInteractDialogue:
+    name:
+    - Jack
+    - Jack
+    sentences:
+    - Looks like there's something in the sink drain...
+    - '...yep, I''m not getting that out with these hands. I might need something
+      to pull it to me.'
+  beforeMagnetObserveDialogue:
+    name:
+    - Jack
+    - Jack
+    sentences:
+    - I feel like my hands are gonna need a good washing by the time I'm through checking
+      this place out...
+    - '...wait, is there something shining in the sink drain?'
+  afterMagnetInteractDialogue:
+    name:
+    - Jack
+    - Jack
+    sentences:
+    - And...got it. Looks like somebody dropped the DJ Table Key down there.
+    - Unless I want to wash my hands, I think I'm done here.
+  afterMagnetObserveDialogue:
+    name:
+    - Jack
+    sentences:
+    - Really, though. Who drops a key in the sink drain?
+  observe: 0
+  narrativeManager: {fileID: 859692028}
+--- !u!65 &898525120
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 898525117}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 0.09679032, y: 0.05826117, z: 0.16047472}
+  m_Center: {x: -0.003928882, y: -0.02792646, z: -0.06416884}
 --- !u!1001 &899156388
 Prefab:
   m_ObjectHideFlags: 0
@@ -23297,7 +23512,7 @@ Prefab:
     m_Modifications:
     - target: {fileID: 4711212202348950, guid: 377a5bf300b6785408ce5d37cc37414d, type: 2}
       propertyPath: m_LocalPosition.x
-      value: -21.633
+      value: -22.66
       objectReference: {fileID: 0}
     - target: {fileID: 4711212202348950, guid: 377a5bf300b6785408ce5d37cc37414d, type: 2}
       propertyPath: m_LocalPosition.y
@@ -23305,7 +23520,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 4711212202348950, guid: 377a5bf300b6785408ce5d37cc37414d, type: 2}
       propertyPath: m_LocalPosition.z
-      value: 17.82
+      value: 17.5
       objectReference: {fileID: 0}
     - target: {fileID: 4711212202348950, guid: 377a5bf300b6785408ce5d37cc37414d, type: 2}
       propertyPath: m_LocalRotation.x
@@ -23313,7 +23528,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 4711212202348950, guid: 377a5bf300b6785408ce5d37cc37414d, type: 2}
       propertyPath: m_LocalRotation.y
-      value: -0.34487292
+      value: 0.9487879
       objectReference: {fileID: 0}
     - target: {fileID: 4711212202348950, guid: 377a5bf300b6785408ce5d37cc37414d, type: 2}
       propertyPath: m_LocalRotation.z
@@ -23321,7 +23536,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 4711212202348950, guid: 377a5bf300b6785408ce5d37cc37414d, type: 2}
       propertyPath: m_LocalRotation.w
-      value: 0.9386494
+      value: 0.31591386
       objectReference: {fileID: 0}
     - target: {fileID: 4711212202348950, guid: 377a5bf300b6785408ce5d37cc37414d, type: 2}
       propertyPath: m_RootOrder
@@ -23333,7 +23548,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 4711212202348950, guid: 377a5bf300b6785408ce5d37cc37414d, type: 2}
       propertyPath: m_LocalEulerAnglesHint.y
-      value: -40.348003
+      value: 143.168
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 377a5bf300b6785408ce5d37cc37414d, type: 2}
@@ -25748,6 +25963,112 @@ Transform:
   m_Father: {fileID: 574752830}
   m_RootOrder: 3
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &1309786787
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 1585783424728398, guid: 7c933bae1e637ec40910c700fb7ccc62,
+    type: 2}
+  m_PrefabInternal: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1309786788}
+  - component: {fileID: 1309786790}
+  - component: {fileID: 1309786789}
+  m_Layer: 0
+  m_Name: TriggerBox
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1309786788
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 4637810153053320, guid: 7c933bae1e637ec40910c700fb7ccc62,
+    type: 2}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1309786787}
+  m_LocalRotation: {x: -0, y: 0.6255995, z: -0, w: -0.78014445}
+  m_LocalPosition: {x: 0.11, y: 0, z: -0.13}
+  m_LocalScale: {x: 0.99999946, y: 1, z: 0.99999946}
+  m_Children: []
+  m_Father: {fileID: 394068220}
+  m_RootOrder: 2
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1309786789
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 114108556165725218, guid: 7c933bae1e637ec40910c700fb7ccc62,
+    type: 2}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1309786787}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 275daac496202f84582a4283f7746d92, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  dialogueBox: {fileID: 1061854859}
+  observeInteract: {fileID: 468984924}
+  scene: {fileID: 0}
+  highVolumeInteractDialogue:
+    name:
+    - Jack
+    - Patron
+    - Jack
+    - Patron
+    - Jack
+    - Patron
+    sentences:
+    - EXCUSE ME.
+    - UH, HEY.
+    - WHAT?
+    - WHAT?
+    - I CAN'T HEAR YOU.
+    - WHAT?
+  highVolumeObserveDialogue:
+    name:
+    - Jack
+    sentences:
+    - It's too loud to talk in here...
+  lowVolumeInteractDialogue:
+    name:
+    - Jack
+    - Patron
+    - Jack
+    - Patron
+    - Jack
+    - Patron
+    - Pig
+    - Jack
+    sentences:
+    - Excuse me.
+    - Would you mind leaving me alone?
+    - Huh?
+    - It's just that this club isn't exactly your demographic...
+    - '...'
+    - '...and if I''m going to score, then I can''t be seen talking to you.'
+    - Ouch! Right in the feelings, huh Jack?
+    - Please, Pig. Keep your observations on the other side of the headset.
+  lowVolumeObserveDialogue:
+    name:
+    - Jack
+    sentences:
+    - Should be able to chat now...
+  observe: 0
+  narrativeManager: {fileID: 859692028}
+--- !u!65 &1309786790
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 65725255642415768, guid: 7c933bae1e637ec40910c700fb7ccc62,
+    type: 2}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1309786787}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 1.2036092, y: 1.2068894, z: 1.2985567}
+  m_Center: {x: 0.01945245, y: 0.8242444, z: -0.052681103}
 --- !u!4 &1310143659 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 4034040692430132, guid: 14e09d8613aa8b846a21db1ef70403e6,
@@ -26434,6 +26755,112 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 4971317794224768, guid: aabdf7d076a80e94b8f68953fde0a6b3,
     type: 2}
   m_PrefabInternal: {fileID: 391939817}
+--- !u!1 &1354980078
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 1585783424728398, guid: 7c933bae1e637ec40910c700fb7ccc62,
+    type: 2}
+  m_PrefabInternal: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1354980079}
+  - component: {fileID: 1354980081}
+  - component: {fileID: 1354980080}
+  m_Layer: 0
+  m_Name: TriggerBox
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1354980079
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 4637810153053320, guid: 7c933bae1e637ec40910c700fb7ccc62,
+    type: 2}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1354980078}
+  m_LocalRotation: {x: -0, y: -0.60465235, z: -0, w: 0.7964895}
+  m_LocalPosition: {x: 0.28, y: 0, z: -0.16}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 2007455944}
+  m_RootOrder: 2
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1354980080
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 114108556165725218, guid: 7c933bae1e637ec40910c700fb7ccc62,
+    type: 2}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1354980078}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 275daac496202f84582a4283f7746d92, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  dialogueBox: {fileID: 1061854859}
+  observeInteract: {fileID: 468984924}
+  scene: {fileID: 0}
+  highVolumeInteractDialogue:
+    name:
+    - Jack
+    - Patron
+    - Jack
+    - Patron
+    - Jack
+    - Patron
+    sentences:
+    - EXCUSE ME.
+    - Y'KNOW, I LOST MY KEY THIS MORNING.
+    - I CAN'T HEAR YOU.
+    - YEP, I DROPPED THEM RIGHT UNDER THE DOOR. LUCKILY, I HAD A MAGNET HANDY THOUGH.
+      PULLED THEM RIGHT TO ME.
+    - I DON'T KNOW WHY I'M EVEN TRYING.
+    - YEAH I WAS CRYING TOO, MAN. I THOUGHT I WAS LOCKED OUT FOR SURE.
+  highVolumeObserveDialogue:
+    name:
+    - Jack
+    sentences:
+    - It's too loud to talk in here...
+  lowVolumeInteractDialogue:
+    name:
+    - Jack
+    - Patron
+    - Jack
+    - Patron
+    - Jack
+    - Patron
+    - Jack
+    sentences:
+    - Excuse me.
+    - Woah, is that a magnet you've got with you?
+    - Uh...
+    - I've got one too, dude. These things always come in handy.
+    - They sure do...don't suppose you've heard of a Love Drug, have you?
+    - Believe me, I've heard about plenty of drugs in here, but I couldn't tell you
+      a specific one.
+    - Right...thanks anyways.
+  lowVolumeObserveDialogue:
+    name:
+    - Jack
+    sentences:
+    - Should be able to chat now...
+  observe: 0
+  narrativeManager: {fileID: 859692028}
+--- !u!65 &1354980081
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 65725255642415768, guid: 7c933bae1e637ec40910c700fb7ccc62,
+    type: 2}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1354980078}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 1.2036092, y: 1.2068894, z: 1.2985567}
+  m_Center: {x: 0.01945245, y: 0.8242444, z: -0.052681103}
 --- !u!4 &1355889945 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 4744424622273062, guid: 61366a0389a393b4cb8130a29fdd3a7d,
@@ -28547,6 +28974,102 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 4904512352088162, guid: 0de957dd96e56f349a8dc1ddcb188803,
     type: 2}
   m_PrefabInternal: {fileID: 1470570264}
+--- !u!1 &1472269542
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 1585783424728398, guid: 7c933bae1e637ec40910c700fb7ccc62,
+    type: 2}
+  m_PrefabInternal: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1472269543}
+  - component: {fileID: 1472269545}
+  - component: {fileID: 1472269544}
+  m_Layer: 0
+  m_Name: TriggerBox
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1472269543
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 4637810153053320, guid: 7c933bae1e637ec40910c700fb7ccc62,
+    type: 2}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1472269542}
+  m_LocalRotation: {x: 0, y: -0.30848032, z: -0, w: -0.9512308}
+  m_LocalPosition: {x: -0.2, y: 0, z: -0.15}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 41416248}
+  m_RootOrder: 2
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1472269544
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 114108556165725218, guid: 7c933bae1e637ec40910c700fb7ccc62,
+    type: 2}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1472269542}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 275daac496202f84582a4283f7746d92, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  dialogueBox: {fileID: 1061854859}
+  observeInteract: {fileID: 468984924}
+  scene: {fileID: 0}
+  highVolumeInteractDialogue:
+    name:
+    - Jack
+    - Patron
+    - Jack
+    - Patron
+    - Jack
+    sentences:
+    - EXCUSE ME.
+    - I LIKE YOUR TRENCHCOAT.
+    - WHAT?
+    - YOUR COAT! IT'S COOL!
+    - I DIDN'T BRING A GOAT HERE.
+  highVolumeObserveDialogue:
+    name:
+    - Jack
+    sentences:
+    - It's too loud to talk in here...
+  lowVolumeInteractDialogue:
+    name:
+    - Jack
+    - Patron
+    - Jack
+    - Patron
+    sentences:
+    - Excuse me.
+    - I love this song!
+    - I wanted to ask if you knew anything about a love drug.
+    - Talk to me when this rhythm gets stale.
+  lowVolumeObserveDialogue:
+    name:
+    - Jack
+    sentences:
+    - Should be able to chat now...
+  observe: 0
+  narrativeManager: {fileID: 859692028}
+--- !u!65 &1472269545
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 65725255642415768, guid: 7c933bae1e637ec40910c700fb7ccc62,
+    type: 2}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1472269542}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 1.2036092, y: 1.2068894, z: 1.2985567}
+  m_Center: {x: 0.01945245, y: 0.8242444, z: -0.052681103}
 --- !u!1001 &1475433649
 Prefab:
   m_ObjectHideFlags: 0
@@ -31208,6 +31731,76 @@ Prefab:
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: ffbf169c873e2e94fa91bb21e8745b38, type: 2}
   m_IsPrefabAsset: 0
+--- !u!1 &1585952684
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1585952685}
+  - component: {fileID: 1585952687}
+  - component: {fileID: 1585952686}
+  m_Layer: 0
+  m_Name: TriggerVolume
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1585952685
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1585952684}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: -0, y: -0.0099, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 1684113301}
+  m_RootOrder: 0
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1585952686
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1585952684}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 742dbc17c6477354ab3fabe4c53a80af, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  dialogueBox: {fileID: 1061854859}
+  observeInteract: {fileID: 468984924}
+  scene: {fileID: 0}
+  InteractDialogue:
+    name:
+    - Jack
+    sentences:
+    - Looks like a Magnet. It couldn't hurt to borrow it for a little bit, I might
+      need it for something.
+  ObserveDialogue:
+    name:
+    - Jack
+    sentences:
+    - That Magnet could be useful. Metal's probably just as attracted to it as the
+      people here are to this new Love Drug...
+  observe: 0
+  narrativeManager: {fileID: 859692028}
+--- !u!65 &1585952687
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1585952684}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 0.021490414, y: 0.0179553, z: 0.010000001}
+  m_Center: {x: 0.00084215024, y: 0.0032602346, z: 2.6296545e-17}
 --- !u!4 &1588964759 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 4020190927071738, guid: 518a1978904493846bf64b0408f6ca26,
@@ -32117,38 +32710,30 @@ MonoBehaviour:
   scene: {fileID: 0}
   beforeKeyInteractDialogue:
     name:
-    - 
-    - 
-    - 
-    - 
+    - Jack
     sentences:
-    - Can't jimmy my way into this one...
+    - Can't jimmy my way into this one...I'm gonna need a key to unlock the lid over
+      the volume sliders.
   beforeKeyObserveDialogue:
     name:
-    - 
-    - 
-    - 
-    - 
+    - Jack
+    - Jack
     sentences:
     - This should work to turn down the music.
     - But I'm gonna need a key...
   afterKeyInteractDialogue:
     name:
-    - 
-    - 
-    - 
-    - 
+    - Jack
+    - Jack
     sentences:
     - Here we go...
-    - No more loud music.
+    - No more loud music. The patrons should be a bit more...audible, now.
   afterKeyObserveDialogue:
     name:
-    - 
-    - 
-    - 
-    - 
+    - Jack
     sentences:
-    - Nothing else to do with this...
+    - Nothing else to do with this...I could play something old timey, but I'd rather
+      not get kicked out mid-investigation.
   observe: 0
   narrativeManager: {fileID: 859692028}
 --- !u!65 &1647153548
@@ -32526,6 +33111,108 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 4408766033078916, guid: 3dfbc70297173604abdd8a3c5c45468f,
     type: 2}
   m_PrefabInternal: {fileID: 1694076874}
+--- !u!1 &1670957935
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 1585783424728398, guid: 7c933bae1e637ec40910c700fb7ccc62,
+    type: 2}
+  m_PrefabInternal: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1670957936}
+  - component: {fileID: 1670957938}
+  - component: {fileID: 1670957937}
+  m_Layer: 0
+  m_Name: TriggerBox
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1670957936
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 4637810153053320, guid: 7c933bae1e637ec40910c700fb7ccc62,
+    type: 2}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1670957935}
+  m_LocalRotation: {x: -0, y: 0.8847548, z: -0, w: -0.46605694}
+  m_LocalPosition: {x: -0.02, y: 0, z: -0.01}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 2019460183}
+  m_RootOrder: 2
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1670957937
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 114108556165725218, guid: 7c933bae1e637ec40910c700fb7ccc62,
+    type: 2}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1670957935}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 275daac496202f84582a4283f7746d92, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  dialogueBox: {fileID: 1061854859}
+  observeInteract: {fileID: 468984924}
+  scene: {fileID: 0}
+  highVolumeInteractDialogue:
+    name:
+    - Jack
+    - Patron
+    - Jack
+    - Patron
+    - Jack
+    - Patron
+    sentences:
+    - EXCUSE ME.
+    - UH, HEY.
+    - WHAT?
+    - WHAT?
+    - I CAN'T HEAR YOU.
+    - WHAT?
+  highVolumeObserveDialogue:
+    name:
+    - Jack
+    sentences:
+    - It's too loud to talk in here...
+  lowVolumeInteractDialogue:
+    name:
+    - Jack
+    - Patron
+    - Jack
+    - Patron
+    - Jack
+    sentences:
+    - Excuse me.
+    - Hey man, is there something I can help you with?
+    - Sorry to interrupt, I was wondering if you might know anything about a love
+      drug?
+    - There's a lot of drugs going around at the Milkyway, finding one might not be
+      so easy.
+    - You're telling me...
+  lowVolumeObserveDialogue:
+    name:
+    - Jack
+    sentences:
+    - Should be able to chat now...
+  observe: 0
+  narrativeManager: {fileID: 859692028}
+--- !u!65 &1670957938
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 65725255642415768, guid: 7c933bae1e637ec40910c700fb7ccc62,
+    type: 2}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1670957935}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 1.2036092, y: 1.2068894, z: 1.2985567}
+  m_Center: {x: 0.01945245, y: 0.8242444, z: -0.052681103}
 --- !u!4 &1671197094 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 4766149975067840, guid: ffbf169c873e2e94fa91bb21e8745b38,
@@ -41238,6 +41925,107 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 4290063864848798, guid: 2566c77318f5ecd42877c0fc96420d48,
     type: 2}
   m_PrefabInternal: {fileID: 2070218763}
+--- !u!1 &2076200498
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 1585783424728398, guid: 7c933bae1e637ec40910c700fb7ccc62,
+    type: 2}
+  m_PrefabInternal: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 2076200499}
+  - component: {fileID: 2076200501}
+  - component: {fileID: 2076200500}
+  m_Layer: 0
+  m_Name: TriggerBox
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &2076200499
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 4637810153053320, guid: 7c933bae1e637ec40910c700fb7ccc62,
+    type: 2}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 2076200498}
+  m_LocalRotation: {x: -0, y: -0.9982491, z: -0, w: -0.0591515}
+  m_LocalPosition: {x: 0.06, y: 0, z: 0.01}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 954112140}
+  m_RootOrder: 2
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &2076200500
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 114108556165725218, guid: 7c933bae1e637ec40910c700fb7ccc62,
+    type: 2}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 2076200498}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 275daac496202f84582a4283f7746d92, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  dialogueBox: {fileID: 1061854859}
+  observeInteract: {fileID: 468984924}
+  scene: {fileID: 0}
+  highVolumeInteractDialogue:
+    name:
+    - Jack
+    - Patron
+    - Jack
+    - Patron
+    - Jack
+    - Patron
+    sentences:
+    - EXCUSE ME.
+    - OH, MAN. THE BOSS IS GONNA KILL ME.
+    - WHAT?
+    - I...DROPPED THE KEY...IN THE SINK DRAIN.
+    - I CAN'T HEAR YOU.
+    - YOU'RE AN EXCELLENT LISTENER, YOU KNOW THAT?
+  highVolumeObserveDialogue:
+    name:
+    - Jack
+    sentences:
+    - It's too loud to talk in here...
+  lowVolumeInteractDialogue:
+    name:
+    - Jack
+    - Patron
+    - Jack
+    - Patron
+    - Jack
+    sentences:
+    - Excuse me.
+    - Uh...
+    - Got something on your mind?
+    - Well...oh, man, if somebody else turned the music down, then...oh, geez. This
+      isn't good.
+    - '...you know what? Nevermind, why don''t you enjoy another drink or two?'
+  lowVolumeObserveDialogue:
+    name:
+    - Jack
+    sentences:
+    - Should be able to chat now...
+  observe: 0
+  narrativeManager: {fileID: 859692028}
+--- !u!65 &2076200501
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 65725255642415768, guid: 7c933bae1e637ec40910c700fb7ccc62,
+    type: 2}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 2076200498}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 1.2036092, y: 1.2068894, z: 1.2985567}
+  m_Center: {x: 0.01945245, y: 0.8242444, z: -0.052681103}
 --- !u!1001 &2077280237
 Prefab:
   m_ObjectHideFlags: 0
