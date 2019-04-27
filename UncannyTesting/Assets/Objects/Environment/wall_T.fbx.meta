@@ -11,6 +11,7 @@ ModelImporter:
     4300000: wall_indoor_m.002
     4300002: wall_indoor_s.007
     4300004: wall_indoor_s.003
+    4300006: wall_indoor_t.001
   externalObjects: {}
   materials:
     importMaterials: 1

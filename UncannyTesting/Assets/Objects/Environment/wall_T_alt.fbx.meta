@@ -10,6 +10,7 @@ ModelImporter:
     3300000: //RootNode
     4300000: wall_indoor_s.006
     4300002: wall_indoor_s.004
+    4300004: wall_indoor_t_alt
   externalObjects: {}
   materials:
     importMaterials: 1
