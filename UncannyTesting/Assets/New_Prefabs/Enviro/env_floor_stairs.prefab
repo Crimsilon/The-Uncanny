@@ -9,44 +9,44 @@ Prefab:
     m_Modifications: []
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 0}
-  m_RootGameObject: {fileID: 1476157427634722}
+  m_RootGameObject: {fileID: 1695829208792874}
   m_IsPrefabAsset: 1
---- !u!1 &1476157427634722
+--- !u!1 &1695829208792874
 GameObject:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
   serializedVersion: 6
   m_Component:
-  - component: {fileID: 4159074488799080}
-  - component: {fileID: 33304537732539870}
-  - component: {fileID: 23679080620244386}
+  - component: {fileID: 4389060448128820}
+  - component: {fileID: 33682405503128182}
+  - component: {fileID: 23279354064607540}
   m_Layer: 0
-  m_Name: deco_coaster
+  m_Name: env_floor_stairs
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
---- !u!4 &4159074488799080
+--- !u!4 &4389060448128820
 Transform:
   m_ObjectHideFlags: 1
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 1476157427634722}
-  m_LocalRotation: {x: -0.7071068, y: 0, z: -0, w: 0.7071067}
-  m_LocalPosition: {x: -9.0756, y: 24.969227, z: -7.667854}
-  m_LocalScale: {x: 6.6580787, y: 6.6580787, z: 6.6580787}
+  m_GameObject: {fileID: 1695829208792874}
+  m_LocalRotation: {x: -0.5000006, y: -0.49999937, z: -0.49999946, w: 0.5000007}
+  m_LocalPosition: {x: 85.175, y: 2.3768, z: 13.577}
+  m_LocalScale: {x: 100.0001, y: 100.0001, z: 100.0001}
   m_Children: []
   m_Father: {fileID: 0}
   m_RootOrder: 0
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!23 &23679080620244386
+  m_LocalEulerAnglesHint: {x: -90.00001, y: 0, z: -90.00001}
+--- !u!23 &23279354064607540
 MeshRenderer:
   m_ObjectHideFlags: 1
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 1476157427634722}
+  m_GameObject: {fileID: 1695829208792874}
   m_Enabled: 1
   m_CastShadows: 1
   m_ReceiveShadows: 1
@@ -56,7 +56,7 @@ MeshRenderer:
   m_ReflectionProbeUsage: 1
   m_RenderingLayerMask: 4294967295
   m_Materials:
-  - {fileID: 2100000, guid: a8af13054d7f4ec4cbf6a00284d1a513, type: 3}
+  - {fileID: 2100000, guid: b7f934481e905cd46b7853b3c0e0119c, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -76,10 +76,10 @@ MeshRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
---- !u!33 &33304537732539870
+--- !u!33 &33682405503128182
 MeshFilter:
   m_ObjectHideFlags: 1
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 1476157427634722}
-  m_Mesh: {fileID: 4300000, guid: a8af13054d7f4ec4cbf6a00284d1a513, type: 3}
+  m_GameObject: {fileID: 1695829208792874}
+  m_Mesh: {fileID: 4300000, guid: 1fcc428e4eb5bae4eab9437f54075964, type: 3}
