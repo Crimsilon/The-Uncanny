@@ -1,0 +1,139 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!241 &24100000
+AudioMixerController:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_Name: ClubMusic
+  m_OutputGroup: {fileID: 24300002, guid: 2c5c36424fffb40a79fe48f2eac87d3b, type: 2}
+  m_MasterGroup: {fileID: 24300002}
+  m_Snapshots:
+  - {fileID: 24500006}
+  - {fileID: 245071047520944316}
+  - {fileID: 245501473962938592}
+  - {fileID: 245130608963875568}
+  - {fileID: 245754534166425224}
+  m_StartSnapshot: {fileID: 24500006}
+  m_SuspendThreshold: -80
+  m_EnableSuspend: 1
+  m_UpdateMode: 0
+  m_ExposedParameters: []
+  m_AudioMixerGroupViews:
+  - guids:
+    - 55b292a783e504de9949706eb85e2d31
+    name: View
+  m_CurrentViewIndex: 0
+  m_TargetSnapshot: {fileID: 245071047520944316}
+--- !u!243 &24300002
+AudioMixerGroupController:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_Name: Master
+  m_AudioMixer: {fileID: 24100000}
+  m_GroupID: 55b292a783e504de9949706eb85e2d31
+  m_Children: []
+  m_Volume: 1d6b181e2172b4b7ba7fbfe7b524d3a8
+  m_Pitch: a11cf6a0eac1d44c294d358a42a51458
+  m_Effects:
+  - {fileID: 24400004}
+  - {fileID: 244362578522871576}
+  m_UserColorIndex: 0
+  m_Mute: 0
+  m_Solo: 0
+  m_BypassEffects: 0
+--- !u!244 &24400004
+AudioMixerEffectController:
+  m_ObjectHideFlags: 3
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_Name: 
+  m_EffectID: 9c7df44b2e6d24149b1a3ba16ba21b03
+  m_EffectName: Attenuation
+  m_MixLevel: c8354779a71e44424aca53d4813ced81
+  m_Parameters: []
+  m_SendTarget: {fileID: 0}
+  m_EnableWetMix: 0
+  m_Bypass: 0
+--- !u!245 &24500006
+AudioMixerSnapshotController:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_Name: Snapshot
+  m_AudioMixer: {fileID: 24100000}
+  m_SnapshotID: 7f0283bff286f472db3a58d97015eb08
+  m_FloatValues:
+    d9b738bf1f1c24007bf9b5ea9414a047: 22000
+  m_TransitionOverrides: {}
+--- !u!244 &244362578522871576
+AudioMixerEffectController:
+  m_ObjectHideFlags: 3
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_Name: 
+  m_EffectID: 682f50b6e27a048e8b5b53aa8b34ca6e
+  m_EffectName: Lowpass
+  m_MixLevel: 2534a76200cb94d58b913759551a2ec3
+  m_Parameters:
+  - m_ParameterName: Cutoff freq
+    m_GUID: d9b738bf1f1c24007bf9b5ea9414a047
+  - m_ParameterName: Resonance
+    m_GUID: 965acda19d4cb4b36b5fc67ec0ed0644
+  m_SendTarget: {fileID: 0}
+  m_EnableWetMix: 0
+  m_Bypass: 0
+--- !u!245 &245071047520944316
+AudioMixerSnapshotController:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_Name: NotMuffled
+  m_AudioMixer: {fileID: 24100000}
+  m_SnapshotID: 5e60e6a55891a459fa5793150021e3a7
+  m_FloatValues:
+    d9b738bf1f1c24007bf9b5ea9414a047: 22000
+  m_TransitionOverrides: {}
+--- !u!245 &245130608963875568
+AudioMixerSnapshotController:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_Name: VeryMuffled
+  m_AudioMixer: {fileID: 24100000}
+  m_SnapshotID: d40119e7815334f9ebe4fb0540fa8670
+  m_FloatValues:
+    d9b738bf1f1c24007bf9b5ea9414a047: 392
+  m_TransitionOverrides: {}
+--- !u!245 &245501473962938592
+AudioMixerSnapshotController:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_Name: BitMuffled
+  m_AudioMixer: {fileID: 24100000}
+  m_SnapshotID: d831c274d4060432ea4ad8ff5982bcc7
+  m_FloatValues:
+    d9b738bf1f1c24007bf9b5ea9414a047: 1400
+  m_TransitionOverrides: {}
+--- !u!245 &245754534166425224
+AudioMixerSnapshotController:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_Name: CompletelyMuffled
+  m_AudioMixer: {fileID: 24100000}
+  m_SnapshotID: aa4dbdfe854444e82804917e411ba9d4
+  m_FloatValues:
+    d9b738bf1f1c24007bf9b5ea9414a047: 10
+  m_TransitionOverrides: {}
