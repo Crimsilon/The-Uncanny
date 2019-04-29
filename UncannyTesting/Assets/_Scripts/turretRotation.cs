@@ -33,7 +33,7 @@ public class turretRotation : MonoBehaviour {
     void Update() {
         if (turretRotate == true)
         {
-            transform.rotation = Quaternion.Euler(0f, maxRotation * Mathf.Sin(Time.time * speed), 0f);
+            transform.rotation = Quaternion.Euler(-90f, (maxRotation * Mathf.Sin(Time.time * speed)), 0f);
         }
         if (turretRotate == false)
         {
