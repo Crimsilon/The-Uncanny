@@ -2581,6 +2581,11 @@ Prefab:
       propertyPath: player
       value: 
       objectReference: {fileID: 790762449}
+    - target: {fileID: 114983445939315310, guid: 518a1978904493846bf64b0408f6ca26,
+        type: 2}
+      propertyPath: interactPrompt
+      value: 
+      objectReference: {fileID: 1895791597}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 518a1978904493846bf64b0408f6ca26, type: 2}
   m_IsPrefabAsset: 0
