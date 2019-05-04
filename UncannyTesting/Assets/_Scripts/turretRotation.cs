@@ -8,7 +8,7 @@ using UnityEngine.AI;
 public class turretRotation : MonoBehaviour {
     public float speed = 2f;
 
-    public float maxRotation = 45f;
+    public float maxRotation = 90f;
 
     private Ray raycast;
 
@@ -33,7 +33,7 @@ public class turretRotation : MonoBehaviour {
     void Update() {
         if (turretRotate == true)
         {
-            transform.rotation = Quaternion.Euler(0f, 0f, (maxRotation * Mathf.Sin(Time.time * speed)));
+            transform.rotation = Quaternion.Euler(0f, (maxRotation * Mathf.Sin(Time.time * speed)), 0f);
         }
         if (turretRotate == false)
         {
