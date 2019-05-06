@@ -8,6 +8,8 @@ using UnityEngine.AI;
 public class turretRotation : MonoBehaviour {
     public float speed = 2f;
 
+    public float speedFollow = 2f;
+
     public float maxRotation = 90f;
 
     private Ray raycast;
@@ -34,7 +36,6 @@ public class turretRotation : MonoBehaviour {
 
     Vector3 m_from = new Vector3(0.0F, 105.0F, 0.0F);
     Vector3 m_to = new Vector3(0.0F, 255.0F, 0.0F);
-    float m_frequency = 1.0F;
 
     // Use this for initialization
     void Start() {
@@ -45,7 +46,7 @@ public class turretRotation : MonoBehaviour {
     void Update() {
         Vector3 targetDir = target.position - transform.position;
 
-        float step = speed * Time.deltaTime;
+        float step = speedFollow * Time.deltaTime;
 
         Vector3 nextDir = new Vector3(targetDir.x, 0.0f, targetDir.z);
 
@@ -59,7 +60,7 @@ public class turretRotation : MonoBehaviour {
             Quaternion from = Quaternion.Euler(this.m_from);
             Quaternion to = Quaternion.Euler(this.m_to);
 
-            float lerp = 0.5F * (1.0F + Mathf.Sin(Mathf.PI * Time.realtimeSinceStartup * this.m_frequency));
+            float lerp = 0.5F * (1.0F + Mathf.Sin(Mathf.PI * Time.realtimeSinceStartup * this.speed));
             this.transform.localRotation = Quaternion.Lerp(from, to, lerp);
 
         }
