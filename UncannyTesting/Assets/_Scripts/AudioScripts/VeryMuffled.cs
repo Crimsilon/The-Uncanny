@@ -23,7 +23,8 @@ public class VeryMuffled : MonoBehaviour {
         if (other.gameObject.CompareTag("Player"))
         {
             music.VeryMuffled();
-            music.NonAmbienceRoom();
+            music.AmbienceRoom();
+            music.DefaultAmbience();
         }
     }
 }

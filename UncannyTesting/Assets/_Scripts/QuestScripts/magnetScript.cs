@@ -122,6 +122,8 @@ public class magnetScript : MonoBehaviour
 
     public narrativeManager narrativeManager;
 
+    public GameObject magnet;
+
     // Use this for initialization
     void Start()
     {
@@ -165,6 +167,7 @@ public class magnetScript : MonoBehaviour
             ///Debug.Log("You are interacting with the Jeffko object");
             observe = false;
             keysEnabled = false;
+            Destroy(magnet);
             observeInteract.SetActive(false);
             dialogueBox.SetActive(true);
             TriggerDialogue();

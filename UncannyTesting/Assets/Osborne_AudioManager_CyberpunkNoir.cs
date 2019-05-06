@@ -58,7 +58,6 @@ public class Osborne_AudioManager_CyberpunkNoir : MonoBehaviour
     public void StartClubMusic()
     {
         Debug.Log("Begin plz work");
-        mufflingLayer[whichLevelOfMuffling].TransitionTo(0);
         ambOffSnap.TransitionTo(0);
         clubSource.clip = clubLoop;
         clubSource.loop = true;
