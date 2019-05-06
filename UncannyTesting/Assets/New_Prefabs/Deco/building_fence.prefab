@@ -21,6 +21,7 @@ GameObject:
   - component: {fileID: 4915646396231916}
   - component: {fileID: 33456285535568036}
   - component: {fileID: 23755980754523814}
+  - component: {fileID: 65428381108484794}
   m_Layer: 0
   m_Name: building_fence
   m_TagString: Untagged
@@ -56,7 +57,7 @@ MeshRenderer:
   m_ReflectionProbeUsage: 1
   m_RenderingLayerMask: 4294967295
   m_Materials:
-  - {fileID: 2100000, guid: 2f10e851872f5ba4d9151cc0172474ef, type: 3}
+  - {fileID: 2100000, guid: 0362b65d89b735d46a044b4011b9a719, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -83,3 +84,15 @@ MeshFilter:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1860380875375054}
   m_Mesh: {fileID: 4300000, guid: 2f10e851872f5ba4d9151cc0172474ef, type: 3}
+--- !u!65 &65428381108484794
+BoxCollider:
+  m_ObjectHideFlags: 1
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1860380875375054}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 0.02, y: 0.0029018826, z: 0.023642644}
+  m_Center: {x: 0, y: 0, z: 0.0018213245}

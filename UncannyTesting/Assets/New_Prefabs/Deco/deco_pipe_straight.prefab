@@ -21,6 +21,7 @@ GameObject:
   - component: {fileID: 4787323250991736}
   - component: {fileID: 33372020953046122}
   - component: {fileID: 23818057611629100}
+  - component: {fileID: 65890362441431320}
   m_Layer: 0
   m_Name: deco_pipe_straight
   m_TagString: Untagged
@@ -56,7 +57,7 @@ MeshRenderer:
   m_ReflectionProbeUsage: 1
   m_RenderingLayerMask: 4294967295
   m_Materials:
-  - {fileID: 2100000, guid: 928a5a775d2a90a46a30ce242a79b1ee, type: 3}
+  - {fileID: 2100000, guid: 653ff1eb6dedb4b4c81a2b24272273d7, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -83,3 +84,15 @@ MeshFilter:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1393740590310902}
   m_Mesh: {fileID: 4300000, guid: 928a5a775d2a90a46a30ce242a79b1ee, type: 3}
+--- !u!65 &65890362441431320
+BoxCollider:
+  m_ObjectHideFlags: 1
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1393740590310902}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 0.012, y: 0.0029999984, z: 0.0025980747}
+  m_Center: {x: -0.00029289327, y: 0, z: 0}

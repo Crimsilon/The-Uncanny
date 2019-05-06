@@ -21,6 +21,7 @@ GameObject:
   - component: {fileID: 4202103645069830}
   - component: {fileID: 33414836959245678}
   - component: {fileID: 23041985727771246}
+  - component: {fileID: 65110284126638880}
   m_Layer: 0
   m_Name: deco_stand
   m_TagString: Untagged
@@ -56,7 +57,7 @@ MeshRenderer:
   m_ReflectionProbeUsage: 1
   m_RenderingLayerMask: 4294967295
   m_Materials:
-  - {fileID: 2100000, guid: 1d19528784b45614493dbcc579eec352, type: 3}
+  - {fileID: 2100000, guid: 1721bbb130d6ad945a07968b9f3099eb, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -83,3 +84,15 @@ MeshFilter:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1239359253906338}
   m_Mesh: {fileID: 4300000, guid: 1d19528784b45614493dbcc579eec352, type: 3}
+--- !u!65 &65110284126638880
+BoxCollider:
+  m_ObjectHideFlags: 1
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1239359253906338}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 0.017090974, y: 0.0091762, z: 0.027446004}
+  m_Center: {x: 0, y: -0.000052722393, z: -0.0031458172}

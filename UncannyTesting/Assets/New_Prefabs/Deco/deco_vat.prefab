@@ -21,6 +21,7 @@ GameObject:
   - component: {fileID: 4565888399081002}
   - component: {fileID: 33726637644935366}
   - component: {fileID: 23090247843609798}
+  - component: {fileID: 136602151023471534}
   m_Layer: 0
   m_Name: deco_vat
   m_TagString: Untagged
@@ -56,7 +57,7 @@ MeshRenderer:
   m_ReflectionProbeUsage: 1
   m_RenderingLayerMask: 4294967295
   m_Materials:
-  - {fileID: 2100000, guid: b6876b01a3c237648b8abe78bb02d159, type: 3}
+  - {fileID: 2100000, guid: 0362b65d89b735d46a044b4011b9a719, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -83,3 +84,16 @@ MeshFilter:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1146112831369292}
   m_Mesh: {fileID: 4300000, guid: b6876b01a3c237648b8abe78bb02d159, type: 3}
+--- !u!136 &136602151023471534
+CapsuleCollider:
+  m_ObjectHideFlags: 1
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1146112831369292}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  m_Radius: 0.01
+  m_Height: 0.02
+  m_Direction: 2
+  m_Center: {x: 0.00052580703, y: -0.00021779674, z: -0.007914769}

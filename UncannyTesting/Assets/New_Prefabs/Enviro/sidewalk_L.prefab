@@ -21,6 +21,7 @@ GameObject:
   - component: {fileID: 4414464934770358}
   - component: {fileID: 33797487006833330}
   - component: {fileID: 23599740799654144}
+  - component: {fileID: 65780449660672970}
   m_Layer: 0
   m_Name: sidewalk_L
   m_TagString: Untagged
@@ -56,7 +57,7 @@ MeshRenderer:
   m_ReflectionProbeUsage: 1
   m_RenderingLayerMask: 4294967295
   m_Materials:
-  - {fileID: 2100000, guid: d8c7c2fe7c67f4649ad26a86817e03c1, type: 3}
+  - {fileID: 2100000, guid: ea912b35784b92741ad4cd80a7f35aa2, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -83,3 +84,15 @@ MeshFilter:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1800960044058492}
   m_Mesh: {fileID: 4300000, guid: d8c7c2fe7c67f4649ad26a86817e03c1, type: 3}
+--- !u!65 &65780449660672970
+BoxCollider:
+  m_ObjectHideFlags: 1
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1800960044058492}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 0.19091325, y: 0.011209824, z: 0.019999996}
+  m_Center: {x: 0.00000004842877, y: -0.0010006323, z: 0.000006361863}
