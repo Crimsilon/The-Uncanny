@@ -24,20 +24,49 @@ public class turretRotation : MonoBehaviour {
 
     public Transform shotFire;
 
+    private Rigidbody rb;
+
+    public Transform point1;
+
+    public Transform point2;
+
+    Quaternion rotate;
+
+    Vector3 m_from = new Vector3(0.0F, 105.0F, 0.0F);
+    Vector3 m_to = new Vector3(0.0F, 255.0F, 0.0F);
+    float m_frequency = 1.0F;
+
     // Use this for initialization
     void Start() {
-
+        rb = GetComponent<Rigidbody>();
     }
 
     // Update is called once per frame
     void Update() {
+        Vector3 targetDir = target.position - transform.position;
+
+        float step = speed * Time.deltaTime;
+
+        Vector3 nextDir = new Vector3(targetDir.x, 0.0f, targetDir.z);
+
         if (turretRotate == true)
         {
-            transform.rotation = Quaternion.Euler(0f, (maxRotation * Mathf.Sin(Time.time * speed)), 0f);
+            //transform.rotation = Quaternion.Euler(0f, (maxRotation * Mathf.Sin(Time.time * speed)), 0f);
+            //transform.rotation = Quaternion.AngleAxis(maxRotation, Vector3.up);
+            //transform.rotation = Quaternion.FromToRotation(Vector3.left, Vector3.right);
+            //rotate.SetFromToRotation(point1.position, point2.position);
+            //transform.rotation = rotate * transform.rotation;
+            Quaternion from = Quaternion.Euler(this.m_from);
+            Quaternion to = Quaternion.Euler(this.m_to);
+
+            float lerp = 0.5F * (1.0F + Mathf.Sin(Mathf.PI * Time.realtimeSinceStartup * this.m_frequency));
+            this.transform.localRotation = Quaternion.Lerp(from, to, lerp);
+
         }
         if (turretRotate == false)
         {
-            transform.LookAt(target);
+            Vector3 newDir = Vector3.RotateTowards(transform.forward, nextDir, step, 0.0f);
+            transform.rotation = Quaternion.LookRotation(newDir);
         }
 
         if (playerInRange == true && turretStart == true)
