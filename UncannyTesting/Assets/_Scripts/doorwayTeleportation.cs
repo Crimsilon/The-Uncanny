@@ -20,7 +20,9 @@ public class doorwayTeleportation : MonoBehaviour {
     // Use this for initialization
     void Start () {
         interactPrompt.SetActive(false);
-	}
+        colorToFadeTo = new Color(0f, 0f, 0f, 0f);
+        myPanel.CrossFadeColor(colorToFadeTo, fadeTime, true, false);
+    }
 	
 	// Update is called once per frame
 	void Update () {
@@ -40,7 +42,7 @@ public class doorwayTeleportation : MonoBehaviour {
         player.transform.position = warpPoint;
         Time.timeScale = 1;
         colorToFadeTo = new Color(0f, 0f, 0f, 0f);
-        myPanel.CrossFadeColor(colorToFadeTo, fadeTime, false, true);
+        myPanel.CrossFadeColor(colorToFadeTo, fadeTime, false, false);
     }
 
     private void OnTriggerEnter(Collider other)
