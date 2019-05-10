@@ -6,6 +6,8 @@ public class cameraFollow : MonoBehaviour {
 
     public Transform player;
 
+    private GameObject respawn;
+
     public float distance = 18.0f;
 
     public float distanceFix = 2.0f;

@@ -4,6 +4,8 @@ using System;
 using UnityEngine;
 using UnityEngine.UI;
 using UnityEngine.AI;
+using UnityEditor.Animations;
+using UnityEngine.SceneManagement;
 
 public class turretRotation : MonoBehaviour {
     public float speed = 2f;
@@ -33,6 +35,12 @@ public class turretRotation : MonoBehaviour {
     public Transform point2;
 
     Quaternion rotate;
+
+    public Image death;
+
+    public Animator anim;
+
+    public Vector3 playerRespawn;
 
     Vector3 m_from = new Vector3(0.0F, 105.0F, 0.0F);
     Vector3 m_to = new Vector3(0.0F, 255.0F, 0.0F);
@@ -138,8 +146,9 @@ public class turretRotation : MonoBehaviour {
             if (hitConfirm.collider.gameObject.tag == "Player")
             {
                 print("You are dead");
-                
-                Destroy(player);
+                anim.SetBool("dead", true);
+                Time.timeScale = 0;
+                StartCoroutine(Dead());
                 turretRotate = true;
             }
             else
@@ -150,5 +159,13 @@ public class turretRotation : MonoBehaviour {
                 return;
             }
         }
+    }
+
+    IEnumerator Dead()
+    {
+        yield return new WaitForSecondsRealtime(1.5f);
+        anim.SetBool("dead", false);
+        Time.timeScale = 1;
+        player.transform.position = playerRespawn;
     }
 }

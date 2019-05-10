@@ -29,6 +29,7 @@ public class doorwayTeleportation : MonoBehaviour {
 	
 	// Update is called once per frame
 	void Update () {
+        
         if (inDoorTrigger == true && Input.GetKeyDown(KeyCode.E))
         {
             interactPrompt.SetActive(false);
