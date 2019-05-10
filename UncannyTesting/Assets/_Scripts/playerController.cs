@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 
+[System.Serializable]
 public class playerController : MonoBehaviour {
     public float speed;
 
@@ -21,6 +22,8 @@ public class playerController : MonoBehaviour {
     public float moveSpeed = 10f;
     public float turnSpeed = 50f;
 
+    public bool inScene = false;
+
     Animator anim;
 
 
@@ -28,9 +31,7 @@ public class playerController : MonoBehaviour {
     void Start()
     {
         rb = GetComponent<Rigidbody>();
-        rb.constraints = RigidbodyConstraints.FreezePosition | RigidbodyConstraints.FreezeRotation;
         anim = GetComponent<Animator>();
-        anim.SetBool("isWalking", false);
     }
 
     // Update is called once per frame
@@ -41,7 +42,7 @@ public class playerController : MonoBehaviour {
         m_XAxis = new Vector3(speed, 0, 0);
         m_ZAxis = new Vector3(0, 0, speed);
 
-        if (Input.GetKey(KeyCode.D))
+        if (Input.GetKey(KeyCode.D) && inScene == false)
         {
             anim.SetBool("isWalking", true);
             rb.constraints = RigidbodyConstraints.FreezePositionY | RigidbodyConstraints.FreezeRotation;
@@ -50,7 +51,7 @@ public class playerController : MonoBehaviour {
             transform.rotation = rotation;
         }
 
-        else if (Input.GetKey(KeyCode.A))
+        else if (Input.GetKey(KeyCode.A) && inScene == false)
         {
             anim.SetBool("isWalking", true);
             rb.constraints = RigidbodyConstraints.FreezePositionY | RigidbodyConstraints.FreezeRotation;
@@ -58,7 +59,7 @@ public class playerController : MonoBehaviour {
             Quaternion rotation = Quaternion.LookRotation(Vector3.left, Vector3.up);
             transform.rotation = rotation;
         }
-        else if (Input.GetKey(KeyCode.W))
+        else if (Input.GetKey(KeyCode.W) && inScene == false)
         {
             anim.SetBool("isWalking", true);
             rb.constraints = RigidbodyConstraints.FreezePositionY | RigidbodyConstraints.FreezeRotation;
@@ -66,7 +67,7 @@ public class playerController : MonoBehaviour {
             Quaternion rotation = Quaternion.LookRotation(Vector3.forward, Vector3.up);
             transform.rotation = rotation;
         }
-        else if (Input.GetKey(KeyCode.S))
+        else if (Input.GetKey(KeyCode.S) && inScene == false)
         {
             anim.SetBool("isWalking", true);
             rb.constraints = RigidbodyConstraints.FreezePositionY | RigidbodyConstraints.FreezeRotation;
@@ -77,8 +78,11 @@ public class playerController : MonoBehaviour {
 
         else
         {
-            anim.SetBool("isWalking", false);
-            rb.constraints = RigidbodyConstraints.FreezePosition | RigidbodyConstraints.FreezeRotation;
+            if (inScene == false)
+            {
+                anim.SetBool("isWalking", false);
+                rb.constraints = RigidbodyConstraints.FreezePosition | RigidbodyConstraints.FreezeRotation;
+            }
         }
 
         if (Input.GetKeyDown(KeyCode.LeftShift))
