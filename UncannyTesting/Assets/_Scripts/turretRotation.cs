@@ -149,7 +149,6 @@ public class turretRotation : MonoBehaviour {
                 anim.SetBool("dead", true);
                 Time.timeScale = 0;
                 StartCoroutine(Dead());
-                turretRotate = true;
             }
             else
             {
@@ -167,5 +166,6 @@ public class turretRotation : MonoBehaviour {
         anim.SetBool("dead", false);
         Time.timeScale = 1;
         player.transform.position = playerRespawn;
+        turretRotate = true;
     }
 }
