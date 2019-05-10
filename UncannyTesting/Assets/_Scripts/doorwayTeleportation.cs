@@ -14,7 +14,7 @@ public class doorwayTeleportation : MonoBehaviour {
     public GameObject interactPrompt;
 
     public Image myPanel;
-    float fadeTime = 0.5f;
+    float fadeTime = 2.0f;
     public Color colorToFadeTo;
 
     // Use this for initialization
@@ -22,6 +22,7 @@ public class doorwayTeleportation : MonoBehaviour {
         interactPrompt.SetActive(false);
         colorToFadeTo = new Color(0f, 0f, 0f, 0f);
         myPanel.CrossFadeColor(colorToFadeTo, fadeTime, true, false);
+        Debug.Log("Well this should at least show");
     }
 	
 	// Update is called once per frame
