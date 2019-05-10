@@ -2,6 +2,8 @@
 using System.Collections.Generic;
 using UnityEngine.UI;
 using UnityEngine;
+using UnityEngine.SceneManagement;
+using UnityEditor.Animations;
 
 public class doorwayTeleportation : MonoBehaviour {
 
@@ -14,15 +16,15 @@ public class doorwayTeleportation : MonoBehaviour {
     public GameObject interactPrompt;
 
     public Image myPanel;
-    float fadeTime = 2.0f;
-    public Color colorToFadeTo;
+
+    public Animator anim;
+
+    
 
     // Use this for initialization
     void Start () {
         interactPrompt.SetActive(false);
-        colorToFadeTo = new Color(0f, 0f, 0f, 0f);
-        myPanel.CrossFadeColor(colorToFadeTo, fadeTime, true, false);
-        Debug.Log("Well this should at least show");
+        anim.SetBool("fadeOut", false);
     }
 	
 	// Update is called once per frame
@@ -30,8 +32,7 @@ public class doorwayTeleportation : MonoBehaviour {
         if (inDoorTrigger == true && Input.GetKeyDown(KeyCode.E))
         {
             interactPrompt.SetActive(false);
-            colorToFadeTo = new Color(0f, 0f, 0f, 255f);
-            myPanel.CrossFadeColor(colorToFadeTo, fadeTime, false, false);
+            anim.SetBool("fadeOut", true);
             Time.timeScale = 0;
             StartCoroutine(teleportWait());
         }
@@ -42,8 +43,7 @@ public class doorwayTeleportation : MonoBehaviour {
         yield return new WaitForSecondsRealtime(2);
         player.transform.position = warpPoint;
         Time.timeScale = 1;
-        colorToFadeTo = new Color(0f, 0f, 0f, 0f);
-        myPanel.CrossFadeColor(colorToFadeTo, fadeTime, false, false);
+        anim.SetBool("fadeOut", false);
     }
 
     private void OnTriggerEnter(Collider other)
