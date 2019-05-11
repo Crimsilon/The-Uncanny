@@ -26,9 +26,19 @@ public class julietScript : MonoBehaviour {
 
     public Dialogue afterJulietObserveDialogue;
 
+    public Dialogue pigCutscene;
+
     public bool observe = false;
 
     public narrativeManager narrativeManager;
+
+    public int dialogueCount = 0;
+
+    public int dialogueTotal1 = 13;
+
+    public int dialogueTotal2 = 8;
+
+    public bool canInteract = false;
 
     // Use this for initialization
     void Start()
@@ -58,6 +68,8 @@ public class julietScript : MonoBehaviour {
             {
                 FindObjectOfType<dialogueManager>().StartDialogue(beforeJulietInteractDialogue);
                 narrativeManager.JulietTalkedTo = true;
+                canInteract = true;
+                StartCoroutine(cutscene());
             }
 
             if (observe == true)
@@ -82,6 +94,10 @@ public class julietScript : MonoBehaviour {
     // Update is called once per frame
     void Update()
     {
+        if (Input.GetKeyDown(KeyCode.Space) && canInteract == true)
+        {
+            dialogueCount = dialogueCount + 1;
+        }
         if (inTrigger == true && Input.GetKeyDown(KeyCode.Q) && keysEnabled == true)
         {
             ///StartCoroutine(observeActivate());
@@ -132,5 +148,23 @@ public class julietScript : MonoBehaviour {
             observeInteract.SetActive(false);
             inTrigger = false;
         }
+    }
+
+    IEnumerator cutscene()
+    {
+        yield return new WaitUntil(() => dialogueCount >= dialogueTotal1);
+        dialogueCount = 0;
+        yield return new WaitForSeconds(3f);
+        keysEnabled = false;
+        dialogueBox.SetActive(true);
+        FindObjectOfType<dialogueManager>().StartDialogue(pigCutscene);
+        canInteract = true;
+        Time.timeScale = 0;
+        yield return new WaitUntil(() => dialogueCount >= dialogueTotal2);
+        keysEnabled = true;
+        dialogueBox.SetActive(false);
+        canInteract = false;
+        Time.timeScale = 1;
+        dialogueCount = 0;
     }
 }

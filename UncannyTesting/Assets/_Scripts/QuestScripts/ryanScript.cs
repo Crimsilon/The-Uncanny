@@ -34,6 +34,8 @@ public class ryanScript : MonoBehaviour {
 
     public narrativeManager narrativeManager;
 
+    public int final = 0;
+
     // Use this for initialization
     void Start()
     {
@@ -44,7 +46,7 @@ public class ryanScript : MonoBehaviour {
 
     public void TriggerDialogue()
     {
-        if (narrativeManager.CodeFound)
+        if (narrativeManager.RyanTalkedTo)
         {
             if (observe == false)
             {
@@ -61,7 +63,7 @@ public class ryanScript : MonoBehaviour {
             if (observe == false)
             {
                 FindObjectOfType<dialogueManager>().StartDialogue(beforeCodeInteractDialogue);
-                narrativeManager.CodeFound = true;
+                narrativeManager.RyanTalkedTo = true;
             }
 
             if (observe == true)
