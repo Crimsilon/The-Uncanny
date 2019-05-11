@@ -32,6 +32,7 @@ public class playerController : MonoBehaviour {
     {
         rb = GetComponent<Rigidbody>();
         anim = GetComponent<Animator>();
+        Cursor.visible = false;
     }
 
     // Update is called once per frame

@@ -13,7 +13,10 @@ public class narrativeManager : MonoBehaviour {
     public bool KeyFound;
     public bool VolumeDown;
     public bool JulietTalkedTo;
-    public bool CodeFound;
+    public bool RyanTalkedTo;
+    public bool CameraChecked;
+    public bool SpraypaintReceived;
+    public bool CameraSpraypainted;
 
     private void Start()
     {
@@ -25,6 +28,9 @@ public class narrativeManager : MonoBehaviour {
         KeyFound = false;
         VolumeDown = false;
         JulietTalkedTo = false;
-        CodeFound = false;
+        RyanTalkedTo = false;
+        CameraChecked = false;
+        SpraypaintReceived = false;
+        CameraSpraypainted = false;
     }
 }
