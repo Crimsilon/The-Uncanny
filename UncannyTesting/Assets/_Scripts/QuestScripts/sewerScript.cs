@@ -54,6 +54,10 @@ public class sewerScript : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+        if (Input.GetKeyDown(KeyCode.Space) && canInteract == true)
+        {
+            dialogueCount = dialogueCount + 1;
+        }
         if (playerController.inScene)
         {
 
@@ -67,10 +71,10 @@ public class sewerScript : MonoBehaviour
                     if (final == 0)
                     {
                         interactPrompt.SetActive(false);
-                        anim.SetBool("fadeOut", true);
+                        dialogueBox.SetActive(true);
+                        canInteract = true;
                         FindObjectOfType<dialogueManager>().StartDialogue(canPass);
                         Time.timeScale = 0;
-                        final = 1;
                         StartCoroutine(teleportWait1());
                     }
                     else
@@ -114,6 +118,7 @@ public class sewerScript : MonoBehaviour
         player.transform.position = warpPoint;
         Time.timeScale = 1;
         dialogueCount = 0;
+        final = 1;
         anim.SetBool("fadeOut", false);
     }
 
