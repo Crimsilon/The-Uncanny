@@ -5,6 +5,7 @@ using UnityEngine;
 using UnityEngine.SceneManagement;
 using UnityEditor.Animations;
 
+[System.Serializable]
 public class introScene : MonoBehaviour {
 
     public Image fade;
@@ -46,6 +47,8 @@ public class introScene : MonoBehaviour {
     public bool canInteract;
 
     public bool firstHalf = true;
+
+    public sewerScript sewerScript;
 
     // Use this for initialization
     void Start () {

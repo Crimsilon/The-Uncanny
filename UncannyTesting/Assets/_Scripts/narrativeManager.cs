@@ -18,6 +18,7 @@ public class narrativeManager : MonoBehaviour {
     public bool SpraypaintReceived;
     public bool CameraSpraypainted;
     public bool CrowbarFound;
+    public bool GunFound;
 
     private void Start()
     {
@@ -34,5 +35,6 @@ public class narrativeManager : MonoBehaviour {
         SpraypaintReceived = false;
         CameraSpraypainted = false;
         CrowbarFound = false;
+        GunFound = false;
     }
 }

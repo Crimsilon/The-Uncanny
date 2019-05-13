@@ -7,6 +7,7 @@ using UnityEngine.AI;
 using UnityEditor.Animations;
 using UnityEngine.SceneManagement;
 
+[System.Serializable]
 public class turretRotation : MonoBehaviour {
     public float speed = 2f;
 
@@ -42,8 +43,14 @@ public class turretRotation : MonoBehaviour {
 
     public Vector3 playerRespawn;
 
-    Vector3 m_from = new Vector3(0.0F, 105.0F, 0.0F);
-    Vector3 m_to = new Vector3(0.0F, 255.0F, 0.0F);
+    public Vector3 m_from = new Vector3(0.0F, 105.0F, 0.0F);
+    public Vector3 m_to = new Vector3(0.0F, 255.0F, 0.0F);
+
+    public AudioClip startUp;
+
+    public AudioClip shoot;
+
+    public AudioSource MusicSource;
 
     // Use this for initialization
     void Start() {
@@ -93,6 +100,8 @@ public class turretRotation : MonoBehaviour {
                 if (hit.collider.gameObject.CompareTag("Player"))
                 {
                     turretRotate = false;
+                    MusicSource.clip = startUp;
+                    MusicSource.Play();
                     print("Whose footprints are these");
                     StartCoroutine(TimeToDie());
                     return;
@@ -145,6 +154,8 @@ public class turretRotation : MonoBehaviour {
         {
             if (hitConfirm.collider.gameObject.tag == "Player")
             {
+                MusicSource.clip = shoot;
+                MusicSource.Play();
                 print("You are dead");
                 anim.SetBool("dead", true);
                 Time.timeScale = 0;
