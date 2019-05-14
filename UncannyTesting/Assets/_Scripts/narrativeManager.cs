@@ -19,6 +19,7 @@ public class narrativeManager : MonoBehaviour {
     public bool CameraSpraypainted;
     public bool CrowbarFound;
     public bool GunFound;
+    public bool PotionMade;
 
     private void Start()
     {
@@ -36,5 +37,6 @@ public class narrativeManager : MonoBehaviour {
         CameraSpraypainted = false;
         CrowbarFound = false;
         GunFound = false;
+        PotionMade = false;
     }
 }
