@@ -86,15 +86,15 @@ public class playerController : MonoBehaviour {
             }
         }
 
-        if (Input.GetKeyDown(KeyCode.LeftShift))
-        {
-            speed = speed + 2.5f;
-        }
+        //if (Input.GetKeyDown(KeyCode.LeftShift))
+        //{
+            //speed = speed + 2.5f;
+        //}
 
-        if (Input.GetKeyUp(KeyCode.LeftShift))
-        {
-            speed = speed - 2.5f;
-        }
+        //if (Input.GetKeyUp(KeyCode.LeftShift))
+        //{
+            //speed = speed - 2.5f;
+        //}
 
         /// <summary>public Transform startMarker;
 

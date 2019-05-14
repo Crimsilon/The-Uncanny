@@ -19,10 +19,14 @@ public class narrativeManager : MonoBehaviour {
     public bool CameraSpraypainted;
     public bool CrowbarFound;
     public bool GunFound;
+    public bool puzzleStart;
     public bool PotionMade;
+
+    public GameObject puzzleVolumes;
 
     private void Start()
     {
+        puzzleVolumes.SetActive(false);
         BouncerTalkedTo = false;
         NiftyTalkedTo = false;
         CashGrabbed = false;
@@ -37,6 +41,15 @@ public class narrativeManager : MonoBehaviour {
         CameraSpraypainted = false;
         CrowbarFound = false;
         GunFound = false;
+        puzzleStart = false;
         PotionMade = false;
+    }
+
+    public void Update()
+    {
+        if (puzzleStart == true)
+        {
+            puzzleVolumes.SetActive(true);
+        }
     }
 }

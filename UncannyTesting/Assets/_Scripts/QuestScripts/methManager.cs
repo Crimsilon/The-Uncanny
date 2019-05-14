@@ -36,6 +36,8 @@ public class methManager : MonoBehaviour {
             }
             else
             {
+                Time.timeScale = 0;
+                dialogueBox.SetActive(true);
                 FindObjectOfType<dialogueManager>().StartDialogue(wrong);
                 red = false;
                 white = false;
