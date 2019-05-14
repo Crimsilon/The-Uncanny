@@ -17,6 +17,8 @@ public class methManager : MonoBehaviour {
 
     public narrativeManager narrativeManager;
 
+    public finalCutscene finalCutscene;
+
     public int ingredientCount = 0;
 
 	// Use this for initialization
@@ -30,7 +32,7 @@ public class methManager : MonoBehaviour {
         {
             if (red == true && white == true && clear == true)
             {
-
+                finalCutscene.begin = true;
             }
             else
             {

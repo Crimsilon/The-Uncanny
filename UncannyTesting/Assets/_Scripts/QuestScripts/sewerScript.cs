@@ -60,7 +60,7 @@ public class sewerScript : MonoBehaviour
         }
         if (playerController.inScene)
         {
-
+            interactPrompt.SetActive(false);
         }
         else
         {
