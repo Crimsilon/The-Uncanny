@@ -110,6 +110,8 @@ public class objectInformation : MonoBehaviour
 
     public GameObject dialogueBox;
 
+    public GameObject observeInteract;
+
     public GameObject scene;
 
     public Dialogue interactDialogue;
@@ -125,6 +127,7 @@ public class objectInformation : MonoBehaviour
     {
         keysEnabled = true;
         dialogueBox.SetActive(false);
+        observeInteract.SetActive(false);
     }
 
     public void TriggerDialogue()
@@ -150,6 +153,7 @@ public class objectInformation : MonoBehaviour
             observe = true;
             keysEnabled = false;
             dialogueBox.SetActive(true);
+            observeInteract.SetActive(false);
             TriggerDialogue();
             Time.timeScale = 0;
         }
@@ -161,6 +165,7 @@ public class objectInformation : MonoBehaviour
             observe = false;
             keysEnabled = false;
             dialogueBox.SetActive(true);
+            observeInteract.SetActive(false);
             TriggerDialogue();
             Time.timeScale = 0;
 
@@ -178,6 +183,7 @@ public class objectInformation : MonoBehaviour
         if (other.gameObject.CompareTag("Player"))
         {
             Debug.Log("inTrigger is true");
+            observeInteract.SetActive(true);
             inTrigger = true;
         }
     }
@@ -187,6 +193,7 @@ public class objectInformation : MonoBehaviour
         if (other.gameObject.CompareTag("Player"))
         {
             Debug.Log("inTrigger is false");
+            observeInteract.SetActive(false);
             inTrigger = false;
         }
     }
